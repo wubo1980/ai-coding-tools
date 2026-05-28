@@ -8,7 +8,12 @@ export type ToolComparisonRow = {
   pricing: string;
   audience: string;
   searchTerms: string[];
-  highlight?: "Best Value" | "Deep Work" | "Starter Friendly";
+  highlight?: "Best Value" | "Deep Work" | "Starter Friendly" | "New";
+  /**
+   * ISO date string (YYYY-MM-DD) for sorting newest-first.
+   * Tools with no date sort to the end.
+   */
+  addedAt: string;
   sourceLinks: {
     product: string;
     pricing: string;

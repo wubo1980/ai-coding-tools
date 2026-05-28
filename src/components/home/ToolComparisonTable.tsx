@@ -1,6 +1,12 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Link from "next/link";
 
 import type { ToolComparisonRow } from "@/types/tool";
+
+const PAGE_SIZE = 10;
+const MAX_TOTAL = 100;
 
 type ToolComparisonTableProps = {
   tools: ToolComparisonRow[];
@@ -8,12 +14,31 @@ type ToolComparisonTableProps = {
 };
 
 /**
- * Renders the horizontally scrollable comparison table for the home page.
+ * Renders the paginated comparison table for the home page.
+ * Shows at most 10 tools per page (newest first), with a hard cap of 100 total entries.
  */
 export function ToolComparisonTable({
-  tools,
+  tools: allTools,
   emptyMessage,
 }: ToolComparisonTableProps) {
+  const [page, setPage] = useState(0);
+
+  // Cap at MAX_TOTAL, already sorted newest-first by the data layer
+  const cappedTools = useMemo(
+    () => allTools.slice(0, MAX_TOTAL),
+    [allTools],
+  );
+
+  const totalPages = Math.max(1, Math.ceil(cappedTools.length / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages - 1);
+  const pageTools = cappedTools.slice(
+    safePage * PAGE_SIZE,
+    (safePage + 1) * PAGE_SIZE,
+  );
+
+  // Show pagination only when there's more than one page
+  const showPagination = cappedTools.length > PAGE_SIZE;
+
   return (
     <section id="compare" className="mx-auto w-full max-w-7xl px-6 py-18 lg:px-10 lg:py-24">
       <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -30,8 +55,8 @@ export function ToolComparisonTable({
           </p>
         </div>
         <p className="max-w-md text-sm leading-6 text-zinc-500">
-          Sticky tool names, highlighted pricing, and scenario tags keep the table
-          scannable even when you are comparing several tools quickly.
+          Newest tools appear first. Showing {Math.min(PAGE_SIZE, cappedTools.length)} of{" "}
+          {cappedTools.length} tools.
         </p>
       </div>
       <div className="mb-8 flex flex-wrap gap-3">
@@ -64,8 +89,8 @@ export function ToolComparisonTable({
               </tr>
             </thead>
             <tbody>
-              {tools.length > 0 ? (
-                tools.map((tool) => (
+              {pageTools.length > 0 ? (
+                pageTools.map((tool) => (
                   <tr key={tool.slug} className="border-b border-white/8 align-top last:border-b-0">
                     <td className="sticky left-0 z-10 bg-[#121723] px-5 py-5">
                       <div className="flex flex-col gap-2">
@@ -136,6 +161,30 @@ export function ToolComparisonTable({
           </table>
         </div>
       </div>
+
+      {showPagination && (
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <button
+            type="button"
+            disabled={safePage === 0}
+            onClick={() => setPage(safePage - 1)}
+            className="inline-flex h-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] px-5 text-sm text-zinc-300 transition hover:border-[#10b981]/40 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+          >
+            ← Previous
+          </button>
+          <span className="text-sm text-zinc-500">
+            Page {safePage + 1} of {totalPages}
+          </span>
+          <button
+            type="button"
+            disabled={safePage >= totalPages - 1}
+            onClick={() => setPage(safePage + 1)}
+            className="inline-flex h-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] px-5 text-sm text-zinc-300 transition hover:border-[#10b981]/40 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+          >
+            Next →
+          </button>
+        </div>
+      )}
     </section>
   );
 }

@@ -22,6 +22,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     pricing: "Free beta",
     audience: "UI/UX designers who want AI directly inside their Figma canvas.",
     searchTerms: ["design", "figma", "ui", "ux", "prototype", "design system"],
+    addedAt: "2026-05-20",
     sourceLinks: {
       product: "https://www.figma.com/blog/the-figma-agent-is-here/",
       pricing: "https://www.figma.com/pricing/",
@@ -37,6 +38,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     pricing: "$1.50/Mtok input",
     audience: "Teams needing a fast, cheap, capable model for high-volume agentic coding.",
     searchTerms: ["google", "agent", "api", "context", "cost", "benchmark", "antigravity"],
+    addedAt: "2026-05-19",
     sourceLinks: {
       product: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
       pricing: "https://ai.google.dev/pricing",
@@ -52,6 +54,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     pricing: "$99/mo SuperGrok",
     audience: "Developers who want model flexibility and parallel multi-file execution.",
     searchTerms: ["terminal", "cli", "agent", "multi-file", "parallel", "model routing"],
+    addedAt: "2026-05-14",
     sourceLinks: {
       product: "https://grok.com/build",
       pricing: "https://x.ai/pricing",
@@ -68,6 +71,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     audience: "Developers who want AI-native editing without premium-enterprise pricing.",
     searchTerms: ["budget", "affordable", "editor", "cost", "autocomplete", "value"],
     highlight: "Best Value",
+    addedAt: "2026-03-01",
     sourceLinks: {
       product: "https://windsurf.com/editor",
       pricing: "https://windsurf.com/pricing",
@@ -84,6 +88,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     audience: "Professional engineers handling multi-step, high-context work.",
     searchTerms: ["refactor", "legacy", "codebase", "agent", "terminal", "complex"],
     highlight: "Deep Work",
+    addedAt: "2026-02-01",
     sourceLinks: {
       product: "https://www.anthropic.com/product/claude-code",
       pricing: "https://claude.com/pricing",
@@ -100,6 +105,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     audience: "Developers who want an AI-first editor without losing speed.",
     searchTerms: ["frontend", "typescript", "refactor", "react", "ui", "multi-file"],
     highlight: "Deep Work",
+    addedAt: "2025-06-01",
     sourceLinks: {
       product: "https://cursor.com/",
       pricing: "https://cursor.com/en-US/pricing",
@@ -116,6 +122,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     audience: "General developers who want immediate productivity gains.",
     searchTerms: ["javascript", "python", "student", "daily coding", "starter", "debugging"],
     highlight: "Starter Friendly",
+    addedAt: "2024-06-01",
     sourceLinks: {
       product: "https://github.com/features/copilot",
       pricing: "https://github.com/features/copilot/plans",
@@ -131,6 +138,7 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     pricing: "Free personal tier",
     audience: "Developers who value generous free usage and Google ecosystem tie-ins.",
     searchTerms: ["enterprise", "large codebase", "java", "integration", "review", "free"],
+    addedAt: "2024-03-01",
     sourceLinks: {
       product: "https://codeassist.google/",
       pricing: "https://codeassist.google/products/business",
