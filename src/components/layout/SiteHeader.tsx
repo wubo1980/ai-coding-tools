@@ -18,6 +18,9 @@ export function SiteHeader() {
           <Link href="/" className="transition hover:text-white">
             Home
           </Link>
+          <Link href="/blog" className="transition hover:text-white">
+            Blog
+          </Link>
           <Link href="/compare/front-end-dev" className="transition hover:text-white">
             Front-end
           </Link>
