@@ -3,6 +3,9 @@ import type { ToolComparisonRow, ToolDetailEntry } from "@/types/tool";
 import { claudeCodeTool } from "@/content/tools/claude-code";
 import { copilotTool } from "@/content/tools/copilot";
 import { cursorTool } from "@/content/tools/cursor";
+import { figmaAgentTool } from "@/content/tools/figma-agent";
+import { gemini35Tool } from "@/content/tools/gemini-35";
+import { grokBuildTool } from "@/content/tools/grok-build";
 
 export const toolComparisonRows: ToolComparisonRow[] = [
   {
@@ -114,12 +117,60 @@ export const toolComparisonRows: ToolComparisonRow[] = [
       pricing: "https://windsurf.com/pricing",
     },
   },
+  {
+    slug: "grok-build",
+    name: "Grok Build",
+    vendor: "xAI",
+    category: "Agentic coding",
+    coreCapability: "Multi-agent parallel execution with model routing via OpenRouter.",
+    bestFor: ["Multi-file refactors", "CI/CD pipelines", "Parallel execution"],
+    pricing: "$99/mo SuperGrok",
+    audience: "Developers who want model flexibility and parallel multi-file execution.",
+    searchTerms: ["terminal", "cli", "agent", "multi-file", "parallel", "model routing"],
+    sourceLinks: {
+      product: "https://grok.com/build",
+      pricing: "https://x.ai/pricing",
+    },
+  },
+  {
+    slug: "figma-agent",
+    name: "Figma Design Agent",
+    vendor: "Figma",
+    category: "Design agent",
+    coreCapability: "On-canvas AI design collaboration with design system awareness.",
+    bestFor: ["Design exploration", "Bulk editing", "Design system management"],
+    pricing: "Free beta",
+    audience: "UI/UX designers who want AI directly inside their Figma canvas.",
+    searchTerms: ["design", "figma", "ui", "ux", "prototype", "design system"],
+    sourceLinks: {
+      product: "https://www.figma.com/blog/the-figma-agent-is-here/",
+      pricing: "https://www.figma.com/pricing/",
+    },
+  },
+  {
+    slug: "gemini-35",
+    name: "Gemini 3.5 Flash",
+    vendor: "Google",
+    category: "Agentic model",
+    coreCapability: "1M context, strong agentic coding benchmarks, cost-effective pricing.",
+    bestFor: ["Agent loops", "Large codebase analysis", "Cost-sensitive workloads"],
+    pricing: "$1.50/Mtok input",
+    audience: "Teams needing a fast, cheap, capable model for high-volume agentic coding.",
+    searchTerms: ["google", "agent", "api", "context", "cost", "benchmark", "antigravity"],
+    sourceLinks: {
+      product: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      pricing: "https://ai.google.dev/pricing",
+    },
+  },
 ];
 
 export const toolDetailEntries: ToolDetailEntry[] = [
   cursorTool,
   copilotTool,
   claudeCodeTool,
+  grokBuildTool,
+  figmaAgentTool,
+  gemini35Tool,
 ];
 
 /**
