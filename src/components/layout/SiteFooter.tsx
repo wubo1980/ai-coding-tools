@@ -18,7 +18,7 @@ export function SiteFooter() {
             </p>
           </div>
           <a
-            href="https://discord.gg/4WfDrnzTp7"
+            href="https://discord.gg/ac4ACB26nZ"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-[#5865F2]/40 bg-[#5865F2]/10 px-4 py-2 text-xs font-medium text-[#5865F2] transition hover:border-[#5865F2]/70 hover:bg-[#5865F2]/20"
