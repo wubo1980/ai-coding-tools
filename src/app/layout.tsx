@@ -13,13 +13,10 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ai-coding-tools-psi.vercel.app"),
+  metadataBase: new URL("https://ai-coding-tools.com"),
   title: "AI Coding Tools",
   description:
     "Compare AI coding assistants with source-backed pricing, scenario fit, and honest trade-offs.",
-  other: {
-    "google-site-verification": "N21K5VoxWUyIIwGf5NZjvhvU2Ty_JC2EoVhMWPL-iro",
-  },
 };
 
 /**
