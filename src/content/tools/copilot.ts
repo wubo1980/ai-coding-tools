@@ -13,7 +13,7 @@ export const copilotTool: ToolDetailEntry = {
     { label: "First availability", value: "Technical preview announced in 2021" },
     {
       label: "Current release",
-      value: "Service-based platform; May 2026 feature cadence with no single standalone app version",
+      value: "Service-based platform; Copilot Desktop App in technical preview (May 14, 2026)",
     },
     {
       label: "Positioning",
@@ -21,7 +21,7 @@ export const copilotTool: ToolDetailEntry = {
     },
   ],
   positioning:
-    "GitHub Copilot makes the most sense when you want one assistant to show up across the tools your team already uses instead of asking everyone to move into a new editor.",
+    "GitHub Copilot makes the most sense when you want one assistant to show up across the tools your team already uses — and the new desktop app finally gives Copilot a standalone agent workspace for deep, multi-session work.",
   capabilities: [
     {
       title: "Inline suggestions",
@@ -54,6 +54,11 @@ export const copilotTool: ToolDetailEntry = {
         "Exposes models from Anthropic, Google, OpenAI, xAI, and more, which gives users flexibility without changing products.",
     },
     {
+      title: "Desktop Agent (technical preview)",
+      description:
+        "A standalone GitHub-native desktop app with parallel sessions, isolated branches, GitHub context integration, and a session inbox — directly competing with Claude Code, Cursor, and Codex as a full agent workspace.",
+    },
+    {
       title: "GitHub-native context",
       description:
         "Works directly with GitHub issues, pull requests, repositories, and Spaces, which reduces glue work for teams already standardized on GitHub.",
@@ -68,7 +73,7 @@ export const copilotTool: ToolDetailEntry = {
     capability: {
       label: "Capability",
       value: 8,
-      summary: "Very broad across coding, review, CLI, and GitHub workflows, even if it is not always the deepest agent.",
+      summary: "Very broad across coding, review, CLI, and GitHub workflows — now with a standalone desktop agent competing head-to-head with Cursor and Claude Code.",
       tone: "emerald",
     },
     price: {
@@ -191,11 +196,12 @@ export const copilotTool: ToolDetailEntry = {
       url: "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
     },
     { label: "Trust Center", url: "https://copilot.github.trust.page/faq" },
+    { label: "Desktop App announcement", url: "https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/" },
   ],
   seo: {
     title: "GitHub Copilot Review: Pricing, Privacy, and Real Workflow Fit",
     description:
-      "A source-backed GitHub Copilot review covering pricing, privacy changes, capability depth, limitations, and who should use it in 2026.",
+      "Updated May 2026: A source-backed GitHub Copilot review covering pricing, privacy changes, the new Desktop Agent, capability depth, limitations, and who should use it.",
     canonicalPath: "/tool/copilot",
   },
 };
