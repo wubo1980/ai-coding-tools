@@ -11,14 +11,14 @@ export const cursorTool: ToolDetailEntry = {
   overview: [
     { label: "Developer", value: "Anysphere" },
     { label: "First availability", value: "2023 public launch" },
-    { label: "Current release", value: "Cursor 3.1 in the April 2026 release track" },
+    { label: "Current release", value: "Cursor 3.6 (May 29, 2026) with Auto-review, Shared Canvases" },
     {
       label: "Positioning",
       value: "An AI-native IDE focused on agentic editing, multi-file changes, and codebase understanding.",
     },
   ],
   positioning:
-    "Cursor is strongest when your work is broader than one file and you want the editor, the agent, and the model switcher to feel like one workflow instead of three separate tools.",
+    "Cursor is strongest when your work spans repos, review loops, and background schedules — and you want the editor, agents, automations, and review surfaces to feel like one coherent workflow.",
   capabilities: [
     {
       title: "Agent-driven editing",
@@ -60,12 +60,32 @@ export const cursorTool: ToolDetailEntry = {
       description:
         "Adds analytics, org billing, SSO, RBAC, and privacy controls, which makes Cursor viable beyond solo use.",
     },
+    {
+      title: "Parallel agents (Build in Parallel)",
+      description:
+        "Ships async subagents that work on independent steps of a plan simultaneously, which dramatically cuts wait time for complex multi-step tasks.",
+    },
+    {
+      title: "PR review and Split PRs",
+      description:
+        "Built-in PR review surface that takes pull requests from creation to merge in one place, plus Split PRs for landing changes in smaller chunks.",
+    },
+    {
+      title: "Multi-repo Automations",
+      description:
+        "Always-on agents that run across multiple attached repos or even without a repo — monitoring tools, summarizing Slack, flagging customer health, and more.",
+    },
+    {
+      title: "Auto-review run mode",
+      description:
+        "Reduces approval friction by automatically allowing allowlisted and sandboxed tool calls, with a classifier subagent handling edge cases — the agent goes further with fewer interruptions.",
+    },
   ],
   scores: {
     capability: {
       label: "Capability",
       value: 9,
-      summary: "Excellent at repo-wide editing, agent workflows, and day-to-day coding speed.",
+      summary: "Excellent at repo-wide editing, parallel agents, multi-repo automations, and day-to-day coding speed.",
       tone: "emerald",
     },
     price: {
@@ -189,12 +209,12 @@ export const cursorTool: ToolDetailEntry = {
     { label: "Product page", url: "https://cursor.com/" },
     { label: "Pricing page", url: "https://cursor.com/en-US/pricing" },
     { label: "Privacy and data", url: "https://cursor.com/help/security-and-privacy/privacy" },
-    { label: "Changelog", url: "https://cursor.com/changelog/3-1" },
+    { label: "Changelog", url: "https://cursor.com/changelog" },
   ],
   seo: {
     title: "Cursor Review: Pricing, Privacy, and Best Use Cases",
     description:
-      "A developer-focused review of Cursor covering pricing, privacy, core capabilities, strengths, weaknesses, and who should actually use it.",
+      "Updated May 2026: A developer-focused review of Cursor 3.6 covering pricing, privacy, parallel agents, PR review, multi-repo automations, and who should actually use it.",
     canonicalPath: "/tool/cursor",
   },
 };
