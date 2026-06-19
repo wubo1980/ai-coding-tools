@@ -13,7 +13,7 @@ export const copilotTool: ToolDetailEntry = {
     { label: "First availability", value: "Technical preview announced in 2021" },
     {
       label: "Current release",
-      value: "Service-based platform; Copilot Desktop App in technical preview (May 14, 2026)",
+      value: "Service-based platform; Copilot Desktop App GA (June 18, 2026)",
     },
     {
       label: "Positioning",
@@ -56,12 +56,17 @@ export const copilotTool: ToolDetailEntry = {
     {
       title: "Desktop Agent (technical preview)",
       description:
-        "A standalone GitHub-native desktop app with parallel sessions, isolated branches, GitHub context integration, and a session inbox — directly competing with Claude Code, Cursor, and Codex as a full agent workspace.",
+        "A standalone GitHub-native desktop app with parallel sessions, isolated branches, GitHub context integration, a session inbox, and Agent Finder — directly competing with Claude Code, Cursor, and Codex as a full agent workspace.",
     },
     {
       title: "GitHub-native context",
       description:
         "Works directly with GitHub issues, pull requests, repositories, and Spaces, which reduces glue work for teams already standardized on GitHub.",
+    },
+    {
+      title: "Agent Finder (ARD spec)",
+      description:
+        "Implements the new Agentic Resource Discovery (ARD) specification from June 2026, enabling org-wide discovery, governance, and supply-chain management of AI agents — essential for enterprises as agent adoption scales.",
     },
     {
       title: "Enterprise controls",
@@ -93,6 +98,7 @@ export const copilotTool: ToolDetailEntry = {
     "Broadest surface coverage of the three sample tools, from IDE to GitHub to CLI.",
     "Very low adoption friction for teams already living inside GitHub.",
     "Free tier is meaningful enough to test real workflows before paying.",
+    "GA Desktop App with Agent Finder and ARD spec makes Copilot the first agent workspace with enterprise governance baked in.",
     "Code review and cloud agent features make it more than just autocomplete.",
     "Strong default choice for mixed-seniority teams that need consistency.",
   ],
@@ -196,12 +202,12 @@ export const copilotTool: ToolDetailEntry = {
       url: "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
     },
     { label: "Trust Center", url: "https://copilot.github.trust.page/faq" },
-    { label: "Desktop App announcement", url: "https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/" },
+    { label: "Desktop App GA announcement", url: "https://github.blog/changelog/2026-06-18-github-copilot-app-generally-available/" },
   ],
   seo: {
     title: "GitHub Copilot Review: Pricing, Privacy, and Real Workflow Fit",
     description:
-      "Updated May 2026: A source-backed GitHub Copilot review covering pricing, privacy changes, the new Desktop Agent, capability depth, limitations, and who should use it.",
+      "Updated June 2026: A source-backed GitHub Copilot review covering pricing, privacy changes, the GA Desktop Agent with ARD spec, capability depth, limitations, and who should use it.",
     canonicalPath: "/tool/copilot",
   },
 };

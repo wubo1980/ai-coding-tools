@@ -172,7 +172,95 @@ For Claude Code users, this means less time hunting for community plugins and mo
     canonicalPath: "/blog/cursor-35-copilot-desktop-agent-may-2026",
   },
 };
-export const blogPosts: BlogPost[] = [cursor35Post, claudeCodeCanceledPost];
+const copilotAppGAPost: BlogPost = {
+  slug: "github-copilot-desktop-app-ga-june-2026",
+  title: "GitHub Copilot Desktop App Goes GA — Here's What Changed Since the Preview",
+  description:
+    "GitHub's Copilot desktop agent workspace is now generally available with Agent Finder, ARD spec support, and enterprise governance. Here's what changed since the May 2026 preview and what it means.",
+  publishedAt: "June 19, 2026",
+  category: "Product Updates",
+  readTimeMinutes: 5,
+  content: `
+On June 18, GitHub quietly moved the Copilot Desktop App from technical preview to **general availability** — and along with the GA badge came significant new capabilities that change how you should think about Copilot as a development platform.
+
+Here's what actually changed, what stayed the same, and why the GA release matters more than the preview did.
+
+---
+
+## What's New in the GA Release
+
+### 1. Agent Finder — ARD Spec Goes Live
+
+The most important addition to the GA release is **Agent Finder**, built on the new **Agentic Resource Discovery (ARD)** specification. Think of this as an agent registry and discovery protocol for your organization.
+
+ARD lets you:
+
+- **Discover agents across your org** — no more Slack messages asking who owns that automation for triaging dependencies
+- **Govern agent access** — allowlisted agents, approved capabilities, audited executions
+- **Supply-chain management for agents** — track which agents depend on which models, MCP servers, and data sources
+
+This quietly turns the Copilot Desktop App from "a nice agent workspace" into an **org-wide governance surface for AI agents** — something no other tool in this category has shipped yet.
+
+### 2. Agent Finder is Integrated into the Desktop App Session Inbox
+
+Agent Finder doesn't live on a separate admin panel. It's integrated into the same session inbox you use for your daily coding sessions. The discovery, governance, and supply-chain views sit alongside your active coding sessions — you manage agents the same way you manage pull requests.
+
+### 3. What Didn't Change (But Matters)
+
+The core experience that launched in the technical preview remains intact:
+
+- **Isolated sessions** — each session gets its own branch and files
+- **Steer, validate, ship** — review the plan, diff, run commands, land through PR
+- **Workflows and skills** — automate triage, dependency updates, release notes
+- **Multi-model access** — Claude, GPT, Gemini, Grok — you're not locked into one model
+
+What's new is the **governance layer** on top. If the preview answered "what can an agent workspace look like?", the GA answers "how do we manage 50 of these across an engineering org?"
+
+---
+
+## Competitive Implications
+
+The GA release with ARD support changes the competitive dynamics in several ways:
+
+### How It Changes the Matchup Against Cursor
+
+Cursor 3.6 is still the strongest AI-native IDE for individual developer velocity. But Copilot's GA release with ARD gives Microsoft a unique enterprise argument: "You can adopt agent workspaces without losing control." For organizations where procurement and security teams have final say, that's a decisive advantage.
+
+### How It Changes the Matchup Against Claude Code
+
+Claude Code remains the best tool for high-autonomy terminal-first sessions. But Copilot's GitHub-native context — issues, PRs, repos, Spaces — gives it a tighter integration loop for teams already deep in GitHub. The ARD spec adds an enterprise readiness layer that Anthropic hasn't matched yet.
+
+### The ARD Spec: A Governance Standard in the Making?
+
+If ARD gains adoption beyond Copilot — and Microsoft has a strong track record of pushing enterprise standards — it could become the de facto way organizations discover, govern, and audit AI agent usage. That would make Copilot's enterprise moat even deeper.
+
+---
+
+## What This Means for Developers
+
+**If you're evaluating agent workspaces today:** The Copilot Desktop App is now subscription-ready. The ARD integration means your security team has a real governance story, not a hand-wavy promise.
+
+**If you already use the preview:** Nothing breaks. Your sessions, workflows, and settings carry over. You gain access to Agent Finder and ARD features immediately.
+
+**If you dismissed Copilot as just autocomplete:** Re-evaluate. The Desktop App GA is a fundamentally different product from the inline suggestions Copilot was known for. It's now a full agent workspace with org-wide governance — and that's a category only Claude Code and Cursor's cloud agents occupy.
+
+---
+
+## The Bottom Line
+
+The Copilot Desktop App going GA with Agent Finder and ARD spec is the most significant Copilot release since the original launch in 2021. It's not just a preview graduation — it's a targeted move into enterprise agent governance that no competitor has answered yet.
+
+*Check our full [Copilot review](/tool/copilot) for updated pricing and detailed capability scores, or go back to the [comparison table](/) to see how it stacks against Cursor, Claude Code, and Windsurf.*
+  `.trim(),
+  seo: {
+    title: "GitHub Copilot Desktop App Goes GA — June 2026 Update | AI Coding Tools",
+    description:
+      "GitHub's Copilot desktop agent workspace is now GA with Agent Finder and ARD spec. What changed since the May 2026 preview and what it means for developers and engineering orgs.",
+    canonicalPath: "/blog/github-copilot-desktop-app-ga-june-2026",
+  },
+};
+
+export const blogPosts: BlogPost[] = [copilotAppGAPost, cursor35Post, claudeCodeCanceledPost];
 
 export function getBlogPostsByNewest(): BlogPost[] {
   return [...blogPosts].sort(
