@@ -1,5 +1,347 @@
 import type { BlogPost } from "@/types/blog";
 
+const cursorCompose3OriginPost: BlogPost = {
+  slug: "cursor-compose3-origin-june-2026",
+  title: "Cursor Launches Its Own AI Model Compose 3 and Origin Git Platform — What It Means",
+  description:
+    "Cursor announced Compose 3, its first self-trained 1.5T-parameter AI model trained on SpaceX's supercomputer, plus Origin, a Git forge built for AI agents, and a mobile app. Here's what changed.",
+  publishedAt: "June 24, 2026",
+  category: "Industry Analysis",
+  readTimeMinutes: 6,
+  content: `
+![AI Coding Tools Evolution](/blog-cursor-compose3-origin.webp)
+
+If you thought Cursor was just an AI-native IDE, yesterday changed that. At its Compile conference on June 23, 2026, Cursor announced three things that reshape how you should think about the company: a self-trained AI model, a Git forge for AI agents, and a mobile app.
+
+Here's what was announced, what it means for developers, and how it changes the competitive landscape.
+
+---
+
+## The Three Announcements
+
+### Compose 3: Cursor's First Self-Trained AI Model
+
+Cursor's co-founder Michael revealed that Compose 3 — a **1.5 trillion parameter model** — is being trained from scratch on SpaceX's supercomputer. This is not a fine-tune of an existing open-source base like previous Composer models. It's a ground-up model designed to be on par with Claude Opus and GPT in size, using ten to twenty times more compute than any previous Cursor model.
+
+**Key details:**
+- Trained from scratch (not based on any open-source model)
+- 1.5T parameters, comparable to frontier models from Anthropic and OpenAI
+- Trained on SpaceX's supercomputer infrastructure (part of the $60B acquisition)
+- Designed to work beyond coding — signaling a broader AI platform play
+- Expected to ship within weeks
+
+The strategic implication is clear: Cursor no longer wants to be dependent on third-party model providers. By owning the model, it controls latency, cost, and capability decisions end-to-end.
+
+This move mirrors what Apple did with silicon — vertical integration from chip to OS to app — applied to AI coding tools.
+
+### Origin: A Git Forge Built for Parallel AI Agents
+
+The second announcement was **Origin** ([cursor.com/origin](https://cursor.com/origin)), a Git-compatible code hosting and collaboration platform. Co-founder Tomas, who joined through the Graphite acquisition, described Origin as "a Git platform for teams and agents."
+
+**What makes Origin different from GitHub or GitLab:**
+- **Agent-first architecture:** In load tests, Origin handled thousands of agents reading from and writing to a single repository simultaneously
+- **AI-assisted merge conflict resolution:** Origin resolves conflicts automatically instead of blocking a merge
+- **Auto-fix for CI failures:** When CI tests fail on an agent-generated change, Origin can fix them
+- **Agent-aware code review:** Comments and review workflows are designed for both human and AI reviewers
+- **Built on cloud-native Git architecture:** Origin runs on a new Git layer built on top of cloud providers, not legacy on-prem Git
+
+Origin is already running internally at Cursor and with select partners. Broad availability is planned for **fall 2026**.
+
+This is the most direct competitor to GitHub that any AI tool company has launched. If you're already building with Cursor agents, Origin eliminates the friction of pushing AI-generated code through a human-designed Git workflow.
+
+### Cursor Mobile: iOS Beta
+
+Third, Cursor launched **Cursor Mobile** as an iOS beta. The app lets developers:
+- Manage agents remotely — start, stop, and review agents from your phone
+- Unblock stuck agents with a tap
+- Review and comment on agent-generated screenshots
+- Access agents running on your desktop via a remote control feature
+
+For developers who run long agent sessions, Cursor Mobile turns "checking on progress" from sitting at the desk into pulling out your phone.
+
+---
+
+## What This Means for the Competitive Landscape
+
+### The Vertical Integration Play
+
+Cursor is now the only AI coding tool company with all three layers:
+
+GitHub Copilot has the platform advantage (GitHub.com) but doesn't control the model. Claude Code has the model advantage but no platform. Cursor is now the only company aiming for full vertical stack ownership.
+
+### The SpaceX Connection
+
+SpaceX's $60 billion acquisition of Anysphere (Cursor's parent company) gave Cursor access to compute infrastructure that no other AI coding tool startup has. Training a 1.5T model from scratch is prohibitively expensive for a standalone startup — the compute costs alone can exceed $100M. SpaceX's supercomputer changes that equation entirely.
+
+### What It Means for Developers
+
+**If you use Cursor today:** Nothing changes immediately, but the trajectory is clear. Over the next 6-12 months, Cursor will become less dependent on OpenAI and Anthropic models. You'll likely see Compose 3 as an opt-in or default model option. Origin will become the recommended Git workflow for Cursor users.
+
+**If you use GitHub Copilot:** Origin is a direct challenger to GitHub's dominance. If Origin delivers on its agent-first merging and auto-fix promises, it could pull teams away from GitHub's workflow for AI-generated code.
+
+**If you use Claude Code:** The model advantage gap narrows. Compose 3 aims to match Opus-level reasoning for coding tasks. But Claude Code still has the deepest plugin ecosystem and strongest terminal-first developer experience.
+
+---
+
+## The Bottom Line
+
+Cursor's Compose 3, Origin, and Mobile announcements represent the most ambitious expansion by any AI coding tool company. The vertical integration strategy — model + IDE + Git platform + mobile — is a bet that developers will prefer a unified stack over stitching together best-in-class components.
+
+Whether that bet pays off depends on execution. But one thing is clear: the AI coding tool market is no longer just about autocomplete quality. It's about who owns the full developer workflow, from model inference to code review.
+
+*Check our detailed [Cursor review](/tool/cursor) for updated capability scores, or go back to the [comparison table](/) to see how Cursor stacks against Copilot, Claude Code, and Windsurf.*
+  `.trim(),
+  seo: {
+    title: "Cursor Launches Compose 3 Model and Origin Git Platform",
+    description:
+      "Cursor announced Compose 3, its first self-trained 1.5T model on SpaceX infrastructure, plus Origin Git forge for AI agents. What this means for developers.",
+    canonicalPath: "/blog/cursor-compose3-origin-june-2026",
+  },
+};
+
+const openaiCodexRecordReplayPost: BlogPost = {
+  slug: "openai-codex-record-replay-june-2026",
+  title: "OpenAI Codex Record & Replay — Show a Workflow Once, Replay It Forever",
+  description:
+    "OpenAI Codex launched Record & Replay on June 17, 2026. Demonstrate a workflow once on your Mac, and Codex turns it into a reusable automation skill. Here's how it works and what it means.",
+  publishedAt: "June 24, 2026",
+  category: "Product Updates",
+  readTimeMinutes: 5,
+  content: `
+![OpenAI Codex Record and Replay](/blog-codex-record-replay.webp)
+
+On June 17, 2026, OpenAI added a feature to Codex that fundamentally changes the automation barrier: **Record & Replay**. Instead of describing a workflow in a prompt, you perform the task once while Codex watches, and it turns your actions into a shareable, reusable skill.
+
+This is one of the most practical AI coding tool features released in 2026 — and it has implications far beyond just coding.
+
+---
+
+## How Record & Replay Works
+
+Record & Replay is available on the Codex macOS app. Here's the flow:
+
+1. **Start recording** — Click the record button in Codex's interface
+2. **Perform your workflow** — Use your Mac normally: open files, edit code, run terminal commands, navigate menus, fill forms
+3. **Stop recording** — Codex has captured every action as a structured sequence
+4. **Review and edit** — The recorded workflow appears as an editable skill. You can rename steps, adjust parameters, and add guardrails
+5. **Replay it anytime** — Run the skill with a single button. Codex replays the exact sequence of actions, adapting to your current context
+
+**Key technical constraints:**
+- macOS only (initial release)
+- Requires Computer Use to be enabled
+- Excludes the European Economic Area, United Kingdom, and Switzerland initially
+- Free to use within Codex's existing subscription
+
+## What Makes This Different
+
+Record & Replay is not new in the general automation space — tools like Keyboard Maestro, AppleScript, and Sikuli have done desktop automation for years. What's different is the **AI-native approach**:
+
+### No Programming Required
+
+Traditional automation tools require scripting knowledge: AppleScript, shell scripts, or visual block editors. Record & Replay requires zero configuration. You do the thing once, and Codex figures out the rest.
+
+### Context Awareness
+
+Unlike dumb macro recorders that replay mouse clicks at fixed screen positions, Codex's Computer Use understands what's on screen. If a button moves, Codex can still find it. If a file path changes, Codex can adapt. The recorded workflow is semantic, not positional.
+
+### Editable After Recording
+
+The generated skill is not a black box. You can inspect each step, rename actions, remove unnecessary steps, and add conditions. This makes it easy to refine workflows over time.
+
+### Shareable
+
+Recorded skills can be exported and shared with teammates. For teams adopting Codex, this means onboarding workflows can be captured once and reused by everyone.
+
+---
+
+## Use Cases for Developers
+
+### Environment Setup
+
+The most obvious use case: environment setup. Record yourself cloning a repo, installing dependencies, configuring environment variables, and setting up Docker. New team members replay the skill and get a working environment in seconds instead of spending an afternoon reading setup docs.
+
+### Multi-Step Deployment
+
+Deploying code to production often involves a sequence of terminal commands, web UI clicks, and verification steps. Record it once, replay it on every deployment. If a step fails, you can pause, fix it manually, and resume.
+
+### Bug Reproduction
+
+When a QA tester or user reports a bug, record the steps to reproduce it. Share the recorded skill with the development team. Instead of "click the button on the second tab after entering five characters" — they run the skill and see exactly what happened.
+
+### Code Review Patterns
+
+If you have a consistent code review process — checkout branch, run lint, run tests, check for secrets, review diff — record it as a skill. Run it before starting your review to ensure the code is in a known good state.
+
+### API Explorations and Data Migration
+
+Need to migrate data across services? Record the steps once — API calls, transformations, validations — and replay for each batch. The recorded workflow becomes documentation that actually runs.
+
+---
+
+## Competitive Context
+
+Record & Replay is OpenAI's response to a growing trend across AI coding tools: **workflow persistence**.
+
+| Tool | Workflow Feature | Launch Date |
+|---|---|---|
+| **Codex** | Record & Replay | June 17, 2026 |
+| **Cursor** | Automations (scheduled + event-driven) | May 20, 2026 |
+| **Copilot Desktop** | Workflows and skills | May 14, 2026 |
+| **Claude Code** | Plugin directory | May 2026 |
+
+The difference is the **recording approach**. Cursor and Copilot require you to describe what you want in a prompt. Codex lets you *show* it. For developers who find prompt engineering tedious, Record & Replay is a compelling alternative.
+
+However, there are trade-offs:
+- **Record & Replay** is specific to macOS desktop automation. It doesn't work for CI/CD pipelines or server-side workflows
+- **Cursor Automations** work across repos, including no-repo automations for Slack, analytics, and finance
+- **Copilot Workflows** are GitHub-native and integrate with issues, PRs, and audit logs
+
+---
+
+## The Bottom Line
+
+OpenAI Codex's Record & Replay is a meaningful step forward in making AI automation accessible to non-scripters. For developers who prefer showing over telling, it solves a real friction point.
+
+If you're already using Codex on macOS, Record & Replay is available now. If you're evaluating AI coding tools and workflow automation is a priority, the "prompt vs. demonstrate" distinction is a legitimate factor to weigh.
+
+*This post was published on June 24, 2026. Not sure which AI coding tool fits your workflow? Check our [comparison table](/ "AI Coding Tools Comparison") for pricing breakdowns and scenario-based recommendations, or dive into our [Cursor](/tool/cursor) and [Copilot](/tool/copilot) reviews.*
+  `.trim(),
+  seo: {
+    title: "OpenAI Codex Record & Replay — Show Once, Replay Forever",
+    description:
+      "OpenAI Codex launched Record and Replay on June 17. Show a workflow once on your Mac, and Codex turns it into reusable automation. Find out how it works.",
+    canonicalPath: "/blog/openai-codex-record-replay-june-2026",
+  },
+};
+
+const aiCodeSecurityPost: BlogPost = {
+  slug: "ai-coding-tools-security-symjack-worms-june-2026",
+  title: "AI Coding Tools Are Under Attack — SymJack, Miasma Worms, and What Developers Must Know",
+  description:
+    "SymJack vulns affecting 6 AI coding agents, Miasma/IronWorm supply-chain worms, and new agentic CI/CD risks. A security roundup for developers using Cursor, Claude Code, Copilot, and Grok Build.",
+  publishedAt: "June 24, 2026",
+  category: "Security",
+  readTimeMinutes: 7,
+  content: `
+![AI Code Security](/blog-ai-code-security.webp)
+
+May and June 2026 brought a series of security incidents targeting AI coding tools that every developer using these tools needs to understand. From a critical symlink-hijack vulnerability affecting six major coding agents to self-replicating worms poisoning AI tool configurations, the threat landscape is evolving fast.
+
+Here's what happened, which tools are affected, and what you should do about it.
+
+---
+
+## SymJack: The Approval Prompt Is Lying to You
+
+On May 26, 2026, security researchers at Adversa AI published details on **SymJack** — a critical attack technique targeting AI coding agents. The vulnerability affects Claude Code, Cursor, Copilot, Grok Build, Antigravity, and Windsurf.
+
+**How SymJack works:**
+
+The attack exploits a fundamental trust assumption in AI coding agents: when an agent asks for your approval to execute a terminal command, you assume the command shown in the approval prompt is what will run. SymJack uses symlink manipulation to make the prompt show one thing while the agent executes something entirely different.
+
+- **Severity**: Critical (RCE via symlink hijack)
+- **Attack vector**: The attacker needs initial write access to a file in the repository
+- **Impact**: Remote code execution on the developer's machine
+- **Affected tools**: Claude Code, Cursor, GitHub Copilot, Grok Build, Antigravity, Windsurf
+
+**The deeper problem:** This is not a bug in any single tool. It's a class vulnerability in how AI coding agents handle approval workflows. The approval prompt shows the command text, but the agent resolves file paths and symlinks *after* receiving approval — meaning a malicious symlink planted in the repo changes what actually executes.
+
+### What You Can Do
+
+- Keep your AI coding agents updated to the latest versions (SymJack patches have been rolling out)
+- Review the actual file system state, not just the approval prompt, for sensitive operations
+- Avoid running AI agents on repositories you don't fully trust
+- Use sandboxed environments for reviewing community-contributed code
+
+---
+
+## Miasma and IronWorm: Self-Replicating Worms
+
+On June 9, 2026, the Cloud Security Alliance published a research note on two self-replicating worms — **Miasma** and **IronWorm** — targeting AI coding tool configurations through coordinated npm supply chain attacks.
+
+**Key findings from CSA research:**
+
+- **Miasma** targets developer environment variables and credentials used by AI coding tools
+- **IronWorm** poisons npm packages that AI coding agents commonly recommend or auto-install
+- Both worms self-replicate: after compromising one developer's machine, they use the compromised AI coding agent to push malicious code to other repositories in the organization
+- The attack exploits the trust AI agents place in package registries — when an agent installs a dependency, it doesn't verify whether the package is legitimate or a poisoned variant
+
+This is particularly dangerous because AI coding tools are designed to *increase* velocity. A compromised agent can maliciously modify many repositories before anyone notices.
+
+### What You Can Do
+
+- Pin dependency versions in package.json — don't let AI agents auto-install unpinned or suggested packages
+- Use npm audit and Snyk scanning as part of your CI/CD pipeline
+- Review changes AI agents make to dependency configuration files (package.json, requirements.txt, Cargo.toml)
+- Consider using private package registries for production code
+
+---
+
+## CI/CD in the Agentic Era
+
+On June 5, 2026, Microsoft's security team published a detailed analysis of CI/CD risks in agentic development, using a real Claude Code GitHub Action case study.
+
+**Key risks identified by Microsoft:**
+
+1. **Over-privileged agent tokens**: CI/CD tokens given to AI agents often have more permissions than needed, creating a wide blast radius if compromised
+2. **Unreviewed agent-generated code in production**: The velocity of AI agents can overwhelm human review processes, leading to unreviewed — or poorly reviewed — code reaching production
+3. **Agent-to-agent contamination**: In pipeline where one agent's output feeds another, a compromise in the first agent cascades to all downstream agents
+4. **Model supply chain attacks**: Compromised models or poisoned training data can introduce vulnerabilities that are invisible at the code level
+
+On June 23, **Snyk** announced its agentic development security platform — the first enforcement layer specifically designed for AI agents building enterprise software. The platform claims real-time governance across the full agent development lifecycle, including what agents use, what they generate, and where their output goes.
+
+---
+
+## Putting It All Together: What's the Actual Risk?
+
+Here's a framework for thinking about AI coding tool security:
+
+### Low-Risk Scenarios
+
+- You use AI tools for autocomplete and occasional chat
+- You review every AI-generated change before committing
+- Your repos have strong branch protection and mandatory code review
+- You don't give AI agents direct access to production credentials
+
+### Medium-Risk Scenarios
+
+- You use AI agents for multi-file edits and PR creation
+- You review changes but sometimes approve agent-generated PRs with minimal scrutiny
+- Your CI/CD has automated security scanning
+- AI agents have access to non-production secrets and staging environments
+
+### High-Risk Scenarios
+
+- You have fully autonomous AI agents that can push to production without human review
+- AI agents have access to production credentials and deployment tools
+- Your team uses AI agents to auto-install dependencies and fix CI failures
+- No separate security scanning for AI-generated code vs. human-written code
+
+---
+
+## The Bottom Line
+
+The AI coding tool security landscape has changed dramatically in the last 30 days. SymJack showed us that approval prompts can be manipulated. Miasma and IronWorm showed us that AI agents can be used as attack vectors for self-replicating worms. Microsoft and Snyk showed us that the industry is starting to respond with governance and enforcement layers.
+
+For most developers, the practical advice is straightforward:
+- **Update your tools** to the latest versions (SymJack patches are live)
+- **Review AI-generated dependency changes** carefully
+- **Don't give AI agents production access** unless absolutely necessary
+- **Use sandboxed environments** for high-risk repositories
+- **Consider agentic security tools** like Snyk's platform if you're managing team-wide AI coding agent usage
+
+The tools are getting more powerful. That power comes with new attack surfaces. Knowledge is the first line of defense.
+
+*Check our detailed tool reviews to see which AI coding tools have the best security track records — [Cursor](/tool/cursor), [Copilot](/tool/copilot), and [Claude Code](/tool/claude-code). For the full comparison, visit our [comparison table](/) with pricing, security notes, and developer recommendations.*
+  `.trim(),
+  seo: {
+    title: "AI Code Security — SymJack, Worms & Developer Risks",
+    description:
+      "SymJack vulns affecting 6 AI coding agents, Miasma and IronWorm worms, and agentic CI/CD risks. A security roundup for Cursor, Claude Code, and Copilot users.",
+    canonicalPath: "/blog/ai-coding-tools-security-symjack-worms-june-2026",
+  },
+};
+
 const claudeCodeCanceledPost: BlogPost = {
   slug: "microsoft-claude-code-licenses-canceled",
   title: "Microsoft Just Canceled Claude Code Licenses — Here's What It Means",
@@ -260,7 +602,14 @@ The Copilot Desktop App going GA with Agent Finder and ARD spec is the most sign
   },
 };
 
-export const blogPosts: BlogPost[] = [copilotAppGAPost, cursor35Post, claudeCodeCanceledPost];
+export const blogPosts: BlogPost[] = [
+  cursorCompose3OriginPost,
+  openaiCodexRecordReplayPost,
+  aiCodeSecurityPost,
+  copilotAppGAPost,
+  cursor35Post,
+  claudeCodeCanceledPost,
+];
 
 export function getBlogPostsByNewest(): BlogPost[] {
   return [...blogPosts].sort(

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -40,7 +41,7 @@ export async function generateMetadata({
 
 /**
  * Converts plain markdown-like text into JSX elements.
- * Supports: headers, bold, italic, links, unordered lists.
+ * Supports: headers, bold, italic, links, unordered lists, images.
  */
 function renderContent(content: string): React.ReactNode[] {
   const lines = content.split("\n");
@@ -92,6 +93,25 @@ function renderContent(content: string): React.ReactNode[] {
       return;
     }
 
+    // Image: ![alt text](src)
+    const imageMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imageMatch) {
+      flushList(`list-end-${i}`);
+      const [, imgAlt, imgSrc] = imageMatch;
+      elements.push(
+        <div key={textKey} className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-white/10">
+          <Image
+            src={imgSrc}
+            alt={imgAlt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
+      );
+      return;
+    }
+
     // Horizontal rule
     if (line.startsWith("---")) {
       flushList(`list-end-${i}`);
@@ -103,7 +123,6 @@ function renderContent(content: string): React.ReactNode[] {
 
     // Unordered list items
     if (line.startsWith("- ")) {
-      // Process bold/italic markers
       const text = line.slice(2);
       inList = true;
       listItems.push(
