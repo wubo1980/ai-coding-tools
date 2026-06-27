@@ -1,11 +1,14 @@
 import type { ToolComparisonRow, ToolDetailEntry } from "@/types/tool";
 
 import { claudeCodeTool } from "@/content/tools/claude-code";
+import { codexTool } from "@/content/tools/codex";
 import { copilotTool } from "@/content/tools/copilot";
 import { cursorTool } from "@/content/tools/cursor";
 import { figmaAgentTool } from "@/content/tools/figma-agent";
+import { geminiCodeAssistTool } from "@/content/tools/gemini-code-assist";
 import { gemini35Tool } from "@/content/tools/gemini-35";
 import { grokBuildTool } from "@/content/tools/grok-build";
+import { windsurfTool } from "@/content/tools/windsurf";
 
 /**
  * Tool comparison rows, sorted newest-first.
@@ -58,6 +61,23 @@ export const toolComparisonRows: ToolComparisonRow[] = [
     sourceLinks: {
       product: "https://grok.com/build",
       pricing: "https://x.ai/pricing",
+    },
+  },
+  {
+    slug: "codex",
+    name: "OpenAI Codex",
+    vendor: "OpenAI",
+    category: "Agentic coding",
+    coreCapability: "Workflow recording and replay with GPT-5.5 agent backend.",
+    bestFor: ["Workflow automation", "Environment setup", "Bug reproduction"],
+    pricing: "$20/mo Pro",
+    audience: "Developers on macOS who want automation through demonstration.",
+    searchTerms: ["openai", "codex", "record", "replay", "automation", "macos", "workflow"],
+    highlight: "New",
+    addedAt: "2025-06-01",
+    sourceLinks: {
+      product: "https://openai.com/index/codex-preview",
+      pricing: "https://openai.com/pricing",
     },
   },
   {
@@ -147,9 +167,12 @@ export const toolComparisonRows: ToolComparisonRow[] = [
 ];
 
 export const toolDetailEntries: ToolDetailEntry[] = [
+  codexTool,
   figmaAgentTool,
+  geminiCodeAssistTool,
   gemini35Tool,
   grokBuildTool,
+  windsurfTool,
   cursorTool,
   copilotTool,
   claudeCodeTool,

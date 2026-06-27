@@ -602,11 +602,354 @@ The Copilot Desktop App going GA with Agent Finder and ARD spec is the most sign
   },
 };
 
+const pricingComparisonPost: BlogPost = {
+  slug: "ai-coding-tools-pricing-comparison-2026",
+  title: "AI Coding Tools Pricing 2026: Complete Comparison Guide — Cursor vs Copilot vs Windsurf vs Codex",
+  description:
+    "A comprehensive pricing comparison of 8 AI coding tools in 2026: Cursor, GitHub Copilot, Windsurf, OpenAI Codex, Claude Code, Gemini Code Assist, and more. Free tiers, hidden costs, and best value picks.",
+  publishedAt: "June 27, 2026",
+  category: "Guides",
+  readTimeMinutes: 8,
+  content: `
+![AI Coding Tools Pricing Chart](/blog-pricing-comparison-2026.webp)
+
+Choosing an AI coding tool in 2026 means navigating a pricing landscape that's more fragmented than ever. Cursor has four tiers. Copilot has three. Windsurf keeps it simple with two. Claude Code is bundled into an everything-plan. Gemini Code Assist is actually free.
+
+This guide breaks down every major AI coding tool's pricing in one place — including the hidden costs and usage limits most comparison articles skip.
+
+---
+
+## The Pricing Table
+
+Here's a side-by-side comparison of all major AI coding tools as of June 2026:
+
+| Tool | Free Tier | Pro/Paid Tier | Key Limitation | Best For |
+|:----|:---------|:-------------|:---------------|:--------|
+| **Gemini Code Assist** | ✅ Full free tier | $22.80/user/mo Business | Free tier rate limited | Individual devs on budget |
+| **GitHub Copilot** | ❌ (limited trial) | $10/mo Pro | Completion caps | Students, daily coding |
+| **Windsurf** | ✅ Basic free | $20/mo Pro | Free: limited Cascade | Value-conscious devs |
+| **Cursor** | ✅ Hobby free | $20/mo Pro | Pro+: $60/mo for more usage | Power users |
+| **OpenAI Codex** | ❌ (limited trial) | $20/mo Pro | macOS only | Workflow automation |
+| **Claude Code** | ❌ | Included in Claude ($20/mo) | Requires Claude subscription | Deep reasoning |
+| **Grok Build** | ❌ | $99/mo SuperGrok | Highest price | Parallel execution |
+| **Figma Design Agent** | ✅ Free beta | N/A (beta) | Design-only | UI/UX designers |
+
+---
+
+## Detailed Breakdown
+
+### Gemini Code Assist: The Best Free Tier
+
+Gemini Code Assist's free personal tier is genuinely usable — not a trial-with-expiration like most competitors. You get completions, chat, and code review features with rate limits that are generous enough for daily individual development.
+
+**Business tier ($22.80/user/mo)** adds enterprise connectivity, SSO, compliance tools, and admin controls.
+
+**Bottom line:** If you're an individual developer who doesn't want to pay for AI coding tools, Gemini Code Assist is the clear winner.
+
+### GitHub Copilot: The Baseline
+
+At **$10/mo Pro**, Copilot remains the cheapest paid AI coding tool. The recently GA'd Desktop App adds agent workspace capabilities that were absent at launch.
+
+**Pro ($10/mo):** Completions, chat, and GitHub agent workspace. Usage caps apply.
+**Enterprise ($39/user/mo):** Everything in Pro plus security, policy management, and audit logs.
+
+**Bottom line:** The best option if you're already in the GitHub ecosystem and want a low-cost, broad-coverage tool.
+
+### Windsurf: Best Value
+
+Windsurf's **$20/mo Pro** includes unlimited tab completions — a genuine differentiator when Cursor and Copilot both cap monthly usage. The Cascade agent mode is capable but conservative.
+
+**Team pricing:** Available on request, maturing but functional.
+
+**Bottom line:** The best flat-rate value. Great for freelancers and solo developers who write a lot of code.
+
+### Cursor: Feature-Rich with Tier Pressure
+
+Cursor starts at **$20/mo Pro** but power users quickly feel the tier pressure:
+
+| Tier | Price | Key Difference |
+|:----|:-----|:---------------|
+| Hobby | $0 | Very limited agent requests |
+| Pro | $20/mo | Extended limits, frontier models, cloud agents |
+| Pro+ | $60/mo | 3x usage on OpenAI/Claude/Gemini |
+| Ultra | $200/mo | 20x usage, priority access |
+
+**Bottom line:** The most powerful AI-native IDE, but heavy users pay a premium. Pro+ at $60/mo is where serious daily users end up.
+
+### OpenAI Codex: Single Tier, macOS-Only
+
+Codex Pro at **$20/mo** is straightforward — all features included in one price. The limitation is platform: macOS only, with Record & Replay excluded from several regions at launch.
+
+**Bottom line:** Good value for macOS developers who want workflow recording. Limited usability if you're on Windows or Linux.
+
+### Claude Code: Bundled Value
+
+Claude Code is included in **Claude Pro ($20/mo)** or Claude Team subscriptions. This bundling is great if you already use Claude for other tasks, but expensive if you only want the coding tool.
+
+**Bottom line:** Best value for existing Claude users. Overpriced if you only need an AI coding tool.
+
+### Grok Build: Premium Pricing
+
+At **$99/mo SuperGrok**, Grok Build is the most expensive option. The value proposition is multi-agent parallel execution with model routing — niche but powerful for teams doing high-volume parallel refactoring.
+
+**Bottom line:** Only makes sense for teams that genuinely need parallel agent execution.
+
+---
+
+## Hidden Costs to Watch For
+
+### 1. Usage Caps and Overages
+
+Most pricing pages list a base monthly price. What's less visible:
+- **Cursor Pro** has a monthly usage allowance. Exceed it and you either hit a hard stop or pay overage.
+- **Copilot Pro** also has monthly limits, though they're generous for typical use.
+- **Windsurf Pro** is the only one with genuinely unlimited completions.
+
+### 2. Context Window Cost
+
+Tools that support massive context windows (like Gemini Code Assist's 1M+ tokens) don't charge extra for context size — the pricing is per-token, not per-context. But the API cost behind the tool matters if you're paying directly.
+
+### 3. Team and Enterprise Upcharges
+
+The jump from individual to team pricing can be steep:
+- Cursor Teams: **$40/user/mo** (2x Pro)
+- Copilot Enterprise: **$39/user/mo** (3.9x Pro)
+- Gemini Code Assist Business: **$22.80/user/mo** (free personal → paid business)
+- Claude Team: **$30/user/mo** (1.5x individual)
+
+### 4. Model Choice Costs
+
+If a tool lets you bring your own API key, you're on the hook for model usage separately. Tools like Cursor and Copilot include model costs in the subscription; tools like Aider (open source, BYO key) separate them.
+
+---
+
+## Best Value Picks by Budget
+
+### $0/month — Best Free Options
+1. **Gemini Code Assist** (most features, genuinely free)
+2. **Windsurf Free** (basic features, limited Cascade)
+3. **Cursor Hobby** (very limited but functional)
+
+### $10-20/month — Best Paid Options
+1. **Copilot Pro** ($10/mo) — cheapest paid, broad coverage
+2. **Windsurf Pro** ($20/mo) — best unlimited value
+3. **Cursor Pro** ($20/mo) — most powerful at base tier
+4. **Codex Pro** ($20/mo) — best for macOS workflow automation
+
+### $20+/month — Best Premium Options
+1. **Cursor Pro+** ($60/mo) — heavy Cursor users
+2. **Grok Build** ($99/mo) — parallel agent execution teams
+3. **Claude Pro** ($20/mo) — if you value deep reasoning
+
+---
+
+## The Bottom Line
+
+**For free:** Gemini Code Assist. No other tool offers a genuinely functional free tier for daily development.
+**For value:** Windsurf Pro at $20/mo with unlimited completions.
+**For power:** Cursor Pro ($20) → Pro+ ($60) — pay as you grow.
+**For simplicity:** Codex Pro at $20/mo with no tier pressure, if you're on macOS.
+**For GitHub natives:** Copilot Pro at $10/mo is the cheapest way into a full agent workspace.
+
+The key takeaway? Don't just compare sticker prices. Compare **usage caps, upgrade pressure, and platform fit**. The cheapest tool is the one that actually fits your workflow without forcing you into a pricier tier to get basic things done.
+
+*This guide was published on June 27, 2026. Pricing data reflects the latest information available from official product pages. See our [comparison table](/) for a full tool-by-tool breakdown, or check individual reviews for [Cursor](/tool/cursor), [Copilot](/tool/copilot), [Windsurf](/tool/windsurf), and [Gemini Code Assist](/tool/gemini-code-assist).*
+  `.trim(),
+  seo: {
+    title: "AI Coding Tools Pricing 2026: Complete Comparison Guide",
+    description:
+      "A complete pricing comparison of 8 AI coding tools in 2026. Free tiers, hidden costs, usage caps, and best value picks for every budget. Updated June 2026.",
+    canonicalPath: "/blog/ai-coding-tools-pricing-comparison-2026",
+  },
+};
+
+const openSourceToolsPost: BlogPost = {
+  slug: "best-open-source-ai-coding-tools-2026-aider-cline-continue",
+  title: "Best Open Source AI Coding Tools 2026: Aider, Cline & Continue.dev Compared",
+  description:
+    "A practical comparison of the top open source AI coding tools in 2026: Aider, Cline, and Continue.dev. Installation guides, API cost analysis, and when to choose open source over commercial tools.",
+  publishedAt: "June 27, 2026",
+  category: "Guides",
+  readTimeMinutes: 8,
+  content: `
+![Open Source AI Coding Tools](/blog-open-source-tools-2026.webp)
+
+Not every developer wants to (or can) pay $20/month for an AI coding assistant. Between subscription fatigue, privacy concerns, and the desire for customization, open source AI coding tools are more relevant than ever in 2026.
+
+This guide covers the three major open source AI coding tools that have emerged as legitimate alternatives to Cursor, Copilot, and Codex:
+
+- **Aider** — CLI-based, multi-file agent editing
+- **Cline** — VS Code extension with open agent architecture
+- **Continue.dev** — Customizable, modular AI coding platform
+
+---
+
+## Aider: The Terminal-First Multi-File Agent
+
+**GitHub:** [github.com/paul-gauthier/aider](https://github.com/paul-gauthier/aider) — 25k+ stars
+
+Aider is an open source CLI tool that brings agentic multi-file editing to the terminal. You bring your own API key (OpenAI, Anthropic, or any OpenAI-compatible provider), and Aider handles the rest.
+
+### Key Features
+
+- **Multi-file editing:** Aider can plan and execute changes across multiple files from a single prompt — a capability that rivals Cursor's agent mode.
+- **Architect/Editor dual-mode:** Aider can work in two modes: Architect mode (plan first, explain before editing) and Editor mode (direct changes). This mirrors the "plan then execute" workflow that good engineering teams follow.
+- **Git-native workflow:** Aider automatically creates git commits for each change, with meaningful commit messages. If a change breaks something, you can easily revert.
+- **Lazy mode:** For quick, low-risk edits, you can skip the architect planning and go straight to editing.
+- **Model agnostic:** Works with GPT-4o, Claude Opus, Gemini, DeepSeek, or any model with an API endpoint.
+
+### Pricing
+
+Aider itself is free and open source (Apache 2.0). Your costs are the API tokens consumed:
+
+- **GPT-4o:** ~$0.03-0.10 per typical session
+- **Claude Opus 4.7:** ~$0.15-0.40 per session (for deep reasoning tasks)
+- **Gemini 3.5 Flash:** ~$0.01-0.03 per session (best cost-performance balance)
+
+For a developer doing 10-20 editing sessions per day using Gemini 3.5 Flash, monthly API costs range from **$3-18** — significantly cheaper than any commercial subscription.
+
+### Best For
+- Terminal-first developers who live in the command line
+- Teams that want to audit every AI-generated change (Git-native logs)
+- Cost-conscious developers who want pay-per-use instead of subscriptions
+- Privacy-sensitive users who control their own API calls
+
+### Limitations
+- No GUI or IDE integration (terminal only)
+- Requires comfort with command line and API setup
+- No inline completions — strictly agent/prompt-based editing
+- Session management is manual compared to Cursor or Codex workspaces
+
+---
+
+## Cline: The Open Agent for VS Code
+
+**GitHub:** [github.com/cline/cline](https://github.com/cline/cline) — 30k+ stars
+
+Cline (formerly Claude Dev) is a VS Code extension that brings an agentic coding assistant directly into your editor. It's the most direct open source competitor to Cursor's agent mode.
+
+### Key Features
+
+- **VS Code integration:** Cline runs as a VS Code extension with full access to your editor's file system, terminal, and language server protocol.
+- **Independent agents:** Each Cline conversation creates an independent agent that can create and edit files, execute commands, and interact with VS Code's built-in tools.
+- **Model flexibility:** Supports OpenAI, Anthropic, Google Gemini, AWS Bedrock, and local models via Ollama.
+- **MCP (Model Context Protocol) support:** Cline has first-class MCP support, making it compatible with a growing ecosystem of tools and data sources.
+- **Cost control:** You set the maximum spend per task or per session. Cline warns you before expensive model calls.
+- **Diff-based code review:** Changes are presented as diffs before applying, with an option to reject individual edits.
+
+### Pricing
+
+Cline is free and open source (Apache 2.0). You pay only for the API tokens consumed by the model. For a full day of coding with GPT-4o, expect API costs of roughly **$0.50-2.00**.
+
+### Best For
+- VS Code users who want agentic capabilities without switching editors
+- Developers who want granular control over model selection and costs
+- Teams building custom AI tooling on top of an open, extensible platform
+- Users who want MCP ecosystem access without Cursor's subscription
+
+### Limitations
+- Dependent on VS Code — no standalone mode
+- Performance varies significantly by model choice
+- Setup requires API key configuration (no "sign up and go" convenience)
+- Community-focused support rather than dedicated product support
+
+---
+
+## Continue.dev: The Customizable AI Coding Platform
+
+**Website:** [continue.dev](https://continue.dev) — 20k+ GitHub stars
+
+Continue is the most modular open source AI coding platform. Rather than being a single tool, it's a framework that lets you build your ideal AI coding assistant.
+
+### Key Features
+
+- **Extensible architecture:** Continue uses a "context provider" system where you add capabilities as modules. Need codebase indexing? Add a context provider. Need documentation search? Add another.
+- **Multi-model routing:** Route different tasks to different models — use Gemini 3.5 Flash for rapid completions, Claude Opus for deep reasoning, and a local model for offline work.
+- **Custom slash commands:** Create reusable prompts and workflows as slash commands. \`/refactor\`, \`/explain\`, \`/test\` — your team's common operations become one-command actions.
+- **Hub integrations:** Works with Ollama (local models), LM Studio, OpenAI, Anthropic, Google, and more.
+- **IDE integrations:** Available as VS Code and JetBrains extensions.
+- **Privacy-first:** All processing can run locally if you use a local model, or through your own API keys with major providers.
+
+### Pricing
+
+Continue.dev is free and open source. Costs depend entirely on your model choices:
+
+- **Local models (Ollama):** $0 — all processing on your machine
+- **Remote API models:** API token costs only
+- **Continue Hub:** A free tier is available for hosted model access; premium tiers for advanced features
+
+### Best For
+- Developers who want maximum customization and control
+- Teams building internal AI coding tools customized to their stack
+- Privacy-first users who want fully local AI coding
+- Power users who want to compose multiple models into one workflow
+
+### Limitations
+- Steeper learning curve — customization power comes with complexity
+- Default configuration may feel basic without context provider setup
+- Less polished OOTB experience compared to Cursor or Copilot
+- Community-maintained; no dedicated support team
+
+---
+
+## Open Source vs Commercial: The Decision Framework
+
+| Factor | Open Source | Commercial (Cursor/Copilot/etc.) |
+|:-------|:-----------|:---------------------------------|
+| **Cost** | Pay for API only ($3-18/mo) | Subscription ($10-60/mo) |
+| **Privacy** | Full control (local models) | Provider-dependent |
+| **Customization** | Unlimited | Limited to product features |
+| **Ease of Setup** | API key + install required | One-click sign-up |
+| **Inline Completions** | Continue (limited) | All commercial tools have this |
+| **Support** | Community | Dedicated teams |
+| **Updates** | Community-driven | Regular product updates |
+| **Model Choice** | Any API or local model | Product-selected models |
+
+### When to Choose Open Source
+
+**Choose open source if:**
+- Your budget is limited or you want pay-per-use pricing
+- Privacy is a non-negotiable requirement (especially with local models)
+- You want full control over which models serve which tasks
+- You're comfortable with CLI tools and API setup
+- You want to audit every model interaction
+
+**Choose commercial if:**
+- You want a zero-setup, signed-up-and-working experience
+- You need inline completions in your daily workflow
+- Your team needs dedicated support and SLAs
+- You value polish and UX over customization
+- You want a unified platform (IDE + agent + automation in one)
+
+---
+
+## The Bottom Line
+
+Open source AI coding tools in 2026 are legitimate alternatives to commercial products — especially for cost-conscious, privacy-sensitive, or customization-oriented developers.
+
+- **Aider** is best for terminal-first, git-native workflows
+- **Cline** brings agentic power to VS Code without switching editors
+- **Continue.dev** offers unmatched flexibility and local model support
+
+The biggest trade-off isn't capability — it's convenience. Commercial tools win on "open and use" experience; open source wins on cost, privacy, and control. For many developers, a hybrid approach (open source for primary editing, commercial for specific workflows) makes the most sense.
+
+*This guide was published on June 27, 2026. GitHub star counts and pricing reflect the latest available data. See our [comparison table](/) for commercial tool pricing, or check the Budget Developer scenario page [/compare/budget-developer] for recommendations tailored to cost-conscious teams. Also read our [AI Coding Tools Pricing Guide](/blog/ai-coding-tools-pricing-comparison-2026) for a complete pricing overview.*
+  `.trim(),
+  seo: {
+    title: "Best Open Source AI Coding Tools 2026: Aider, Cline & Continue.dev Compared",
+    description:
+      "A practical comparison of open source AI coding tools in 2026: Aider, Cline, and Continue.dev. API cost analysis, feature comparison, and when to go open source vs commercial.",
+    canonicalPath: "/blog/best-open-source-ai-coding-tools-2026-aider-cline-continue",
+  },
+};
+
 export const blogPosts: BlogPost[] = [
   cursorCompose3OriginPost,
   openaiCodexRecordReplayPost,
   aiCodeSecurityPost,
   copilotAppGAPost,
+  pricingComparisonPost,
+  openSourceToolsPost,
   cursor35Post,
   claudeCodeCanceledPost,
 ];
