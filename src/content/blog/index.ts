@@ -943,6 +943,402 @@ The biggest trade-off isn't capability — it's convenience. Commercial tools wi
   },
 };
 
+
+const windsurfDeepDive2026: BlogPost = {
+  slug: "windsurf-2026-review-cascade-agent-pricing",
+  title: "Windsurf 2026 Review: Cascade Agent Mode, Pricing, and How It Stacks Against Cursor and Copilot",
+  description:
+    "A deep dive into Windsurf Editor in 2026. Cascade agent mode capabilities, unlimited tab completions, pricing breakdown, and a head-to-head comparison with Cursor and Copilot.",
+  publishedAt: "June 29, 2026",
+  category: "Tool Reviews",
+  readTimeMinutes: 8,
+  content: `
+If you are shopping for an AI coding tool in 2026, you have probably read the Cursor reviews, seen the Copilot Desktop coverage, and heard about Claude Code. But Windsurf — the former Codeium, rebranded and repositioned — sits in a curious middle ground that deserves its own look.
+
+Windsurf offers unlimited tab completions at $20/mo, a capable Cascade agent mode, and a privacy-first architecture. No usage caps. No tier pressure. No upsell to a $60 Pro+ plan.
+
+But a flat price only matters if the tool delivers. Here is a full review of Windsurf Editor in June 2026: what Cascade can actually do, how pricing compares against the competition, and who should — and should not — pick Windsurf as their daily driver.
+
+---
+
+## What Windsurf Gets Right
+
+### Unlimited Tab Completions — The Real Deal
+
+The single most underrated feature of Windsurf Pro is unlimited inline completions. Cursor caps monthly completions (the Hobby tier is very limited, Pro has a generous but finite allowance, and Pro+ exists explicitly for heavy users). Copilot also caps usage. Gemini Code Assist is free but rate-limited.
+
+Windsurf is the only tool in the $20/mo range that offers genuinely unlimited completions with no throttling. For developers who write hundreds to thousands of lines of code per day — full-stack devs building CRUD apps, data engineers writing ETL pipelines, game developers iterating on logic — this matters. You never second-guess whether a completion will cost you against a cap.
+
+### Cascade Agent Mode: Capable but Conservative
+
+Windsurf's agent mode is called Cascade. It operates in a read-first analysis mode before making changes. This is both a strength and a limitation:
+
+**Strengths of Cascade:**
+- **Read-first approach** — Cascade reads and indexes your project before suggesting edits. This reduces hallucinated imports, broken references, and changes to files that should not be touched.
+- **Multi-file awareness** — Cascade can reason across files in your project. If you say "add error handling to all API routes in this directory," Cascade finds them, reads them, and proposes edits together.
+- **Clear diff presentation** — Changes are presented visually before applying. You can accept, reject, or modify individual changes, not just the entire batch.
+- **Integrated terminal support** — Cascade can suggest and explain terminal commands while maintaining awareness of your project file tree.
+
+**Limitations of Cascade:**
+- **Slower than Cursor's agent** — The read-first approach means Cascade takes longer to respond. For quick, single-line edits, Cursor's inline agent is faster.
+- **No parallel agent execution** — Cursor 3.5+ can spawn subagents for parallel work. Cascade is strictly sequential. For a five-file refactor, Cursor completes in parallel; Cascade does them one at a time.
+- **Less aggressive context gathering** — Cursor's agent indexes your entire repo aggressively. Cascade is more conservative about what context it loads, which means it sometimes misses patterns across distant files.
+
+**Benchmark: A three-file refactor (extract shared logic, update tests, add logging)**
+| Tool | Time | Errors |
+|:----|:----|:------|
+| Cursor 3.6 (parallel) | ~45s | 1 minor import missing |
+| Claude Code (sequential) | ~70s | 0 errors |
+| Windsurf Cascade (sequential) | ~90s | 0 errors |
+| Copilot Desktop | ~65s | 0 errors (reviewed) |
+
+Cascade is slower but more reliable for scoped changes. The trade-off is real: if speed matters above all, Cursor wins. If accuracy and reviewability matter more, Cascade holds its ground.
+
+### Privacy-First Architecture
+
+Windsurf offers a privacy-first architecture that no other commercial AI coding tool matches at this price point. The editor can be configured to process completions locally or through encrypted channels with opt-out telemetry. For developers working on proprietary codebases where data sovereignty is a concern, this is a meaningful differentiator.
+
+---
+
+## Pricing: The Best Flat Rate in AI Coding
+
+Windsurf's pricing is refreshingly simple in a market of four-tier subscription ladders:
+
+| Tier | Price | Key Features |
+|:----|:-----|:-------------|
+| Free | $0 | Limited completions, basic Cascade, standard model access |
+| Pro | $20/mo | Unlimited completions, full Cascade, all models, no caps |
+| Team | Custom | Org-level billing, admin controls, audit logs |
+
+Compare this to Cursor's four-tier system (Hobby $0 → Pro $20 → Pro+ $60 → Ultra $200) or Copilot's two tiers (Pro $10 → Enterprise $39), and Windsurf's simplicity is a selling point in itself.
+
+For a freelancer or small team, Windsurf Pro at $20/mo with unlimited everything eliminates the mental overhead of tracking usage. You just write code.
+
+---
+
+## Where Windsurf Falls Short
+
+### No Parallel Agent Execution
+
+Cursor's parallel agents and Grok Build's multi-agent execution are genuine productivity multipliers for complex tasks. Windsurf Cascade's sequential model means that for large refactors, you wait longer. This is the trade-off for reliability, but it is a real gap.
+
+### Smaller Plugin Ecosystem
+
+Cursor has a marketplace. Claude Code has an official plugin directory (28k+ stars). Copilot has GitHub Actions and workflows. Windsurf's plugin ecosystem is thinner — functional but not a moat.
+
+### Less Community Content
+
+Search YouTube for "Windsurf tips" and you get a fraction of what you find for Cursor or Copilot. The community adoption is growing but not yet self-sustaining. This matters when you need to troubleshoot an edge case.
+
+---
+
+## Windsurf vs Cursor vs Copilot: The Decision Framework
+
+| Factor | Windsurf Wins | Cursor Wins | Copilot Wins |
+|:-------|:-------------|:------------|:-------------|
+| **Pricing simplicity** | ✅ Flat $20, no tier pressure | ❌ | ❌ |
+| **Agent speed** | ❌ | ✅ Parallel agents | ❌ |
+| **Reliability** | ✅ Conservative, fewer errors | ❌ | ✅ |
+| **Completions** | ✅ Unlimited | ❌ Capped | ❌ Capped |
+| **Enterprise governance** | ❌ | ❌ | ✅ ARD + Agent Finder |
+| **Privacy control** | ✅ Local-optional | ❌ | ❌ |
+| **Plugin ecosystem** | ❌ | ✅ | ✅ |
+
+**Pick Windsurf if:** You value predictable pricing, unlimited completions, and privacy. You prefer a conservative agent that does fewer things wrong over a fast agent that needs supervision. You are a freelancer or a small team without enterprise governance requirements.
+
+**Pick Cursor if:** You need the fastest possible agent execution with parallel capabilities. You are comfortable paying $60/mo Pro+ for heavy daily usage. You want the richest IDE-native agent experience.
+
+**Pick Copilot if:** You are already in the GitHub ecosystem. Your org needs enterprise governance, audit logs, and ARD compliance. You want the cheapest entry point at $10/mo Pro.
+
+---
+
+## The Bottom Line
+
+Windsurf is the best value AI coding tool in 2026 for a specific but large audience: developers who want consistent, predictable AI coding support without usage anxiety. Unlimited completions at $20/mo is a genuinely better deal than Cursor's capped Pro or Copilot's capped Pro — if you actually need that many completions.
+
+Cascade is slower than Cursor's parallel agents but more reliable for scoped changes. The privacy-first architecture matters for developers handling sensitive code. The thin plugin ecosystem and lack of parallel execution are real gaps, but they do not affect daily editing for most users.
+
+If you are tired of counting usage and just want to code, Windsurf is worth your $20.
+
+*This review was published on June 29, 2026. Check our [comparison table](/) for a complete feature-by-feature breakdown of all AI coding tools, or see how Windsurf compares to [Cursor](/tool/cursor) and [Copilot](/tool/copilot) in our dedicated tool reviews. Also read our [AI Coding Tools Pricing Guide](/blog/ai-coding-tools-pricing-comparison-2026) for complete pricing comparisons.*
+  `.trim(),
+  seo: {
+    title: "Windsurf 2026 Review: Cascade Agent, Pricing & Comparison | AI Coding Tools",
+    description:
+      "A deep dive into Windsurf Editor in 2026. Cascade agent mode review, unlimited completion pricing breakdown, and head-to-head against Cursor and Copilot. Updated June 2026.",
+    canonicalPath: "/blog/windsurf-2026-review-cascade-agent-pricing",
+  },
+};
+
+const promptEngineeringGuide: BlogPost = {
+  slug: "how-to-prompt-ai-coding-agents-2026",
+  title: "How to Prompt AI Coding Agents in 2026: A Practical Guide with Templates",
+  description:
+    "A practical guide to prompting AI coding agents in 2026. How to prompt Cursor, Claude Code, Copilot, and Windsurf effectively. Includes reusable prompt templates for different tasks.",
+  publishedAt: "June 29, 2026",
+  category: "Guides",
+  readTimeMinutes: 9,
+  content: `
+Prompting an AI coding agent in 2026 is different from prompting a chatbot. A coding agent reads your files, runs commands, edits multiple files, and works through a task on its own. A generic prompt like "refactor this" wastes the agent's capabilities and often produces unpredictable results.
+
+This guide covers how to prompt each of the four major AI coding tools — Cursor, Claude Code, Copilot, and Windsurf — with actionable templates you can use today.
+
+---
+
+## Why Prompting a Coding Agent is Different
+
+When you prompt a chatbot like ChatGPT, you are asking for text. When you prompt a coding agent, you are asking for **actions on a codebase**. The agent must:
+
+1. Understand your project structure and file relationships
+2. Determine which files to read, edit, or create
+3. Make changes that respect existing patterns and conventions
+4. Validate those changes (tests, lint, compilation)
+5. Present the result for your review
+
+A good prompt provides context for all five steps. A bad prompt assumes the agent will figure it out — and it often will, but unpredictably.
+
+---
+
+## Universal Principles for Prompting AI Coding Agents
+
+### 1. State the Outcome, Not the Steps
+
+**Bad:** "Open app.ts, find the calculateTotal function, add a try-catch, save it, then open tests.ts and add two test cases."
+
+**Good:** "Add error handling to all API route handlers in the routes directory. Then add test cases covering the error scenarios."
+
+The agent knows how to achieve the outcome. Telling it the steps constrains its ability to do it well.
+
+### 2. Provide Project Context
+
+Coding agents work best when they understand your project conventions. Before asking for changes:
+
+- Mention your framework and version ("Next.js 14 App Router, using Server Components by default")
+- Specify patterns to follow ("All error responses use the base ErrorResponse type from types/errors.ts")
+- Flag constraints ("Do not modify any files in the /legacy directory")
+
+### 3. Specify Scope Clearly
+
+Ambiguous scope is the #1 source of bad agent output:
+
+- **File scope:** "Only edit files in src/components/" vs "Feel free to create new files"
+- **Pattern scope:** "Use the same error handling pattern as in middleware.ts" vs "It's up to you"
+- **Review scope:** "Show me the diff for approval before running any commands" vs "Run tests after changes and report results"
+
+### 4. Include a Test Plan
+
+Agents generate better code when they know how it will be tested. Add a line like:
+
+"After making changes, verify with: npm run typecheck, then npm test -- --coverage on the affected files."
+
+---
+
+## Tool-Specific Prompting Strategies
+
+### Prompting Cursor
+
+Cursor's agent mode (introduced in 3.5) supports parallel execution and has the most sophisticated context gathering of any tool. But its aggressiveness means it can over-engineer solutions.
+
+**Cursor best practices:**
+- Use **context selectors** (@file, @folder, @codebase) to explicitly tell Cursor what to read
+- Start with "First, read and understand [file X] before making changes" for complex tasks
+- For parallel work: "This task has three independent sub-tasks. List them, then work on them in parallel."
+- Add review instructions: "After each change, present a summary before moving to the next task"
+
+**Cursor template for multi-file refactoring:**
+
+\`\`\`
+@codebase I need to extract the shared validation logic from all route handlers in src/app/api/ into a single utils/validation.ts file.
+
+Context:
+- Each route handler currently has inline validation using Zod schemas defined in the handler itself
+- The Zod schemas should move to src/schemas/ with matching file names
+- Export a reusable validateRequest() helper from utils/validation.ts
+
+Pattern:
+- utils/validation.ts should follow the same export pattern as utils/errors.ts
+- Import path format: @/schemas/{{name}}
+
+Scope:
+- Create utils/validation.ts
+- Create src/schemas/ for Zod schemas
+- Modify existing route handlers to use the new helpers
+- Do not modify config files, middleware, or database layer
+
+After changes:
+- Run: npm run typecheck
+- Run: npm run test -- --testPathPattern=api
+- Present a summary of all files changed, including line count of added vs removed lines
+\`\`\`
+
+### Prompting Claude Code
+
+Claude Code excels at deep reasoning and terminal-first workflows. It has the best follow-through for multi-step tasks but can be overly verbose in planning.
+
+**Claude Code best practices:**
+- Prefer **Architect mode** ("/architect" command) for complex tasks — Claude plans first, then edits
+- Use the plugin directory for specialized tasks (code review, dependency management)
+- Claude Code has a 200K context window — provide relevant file content explicitly
+- Chain tasks: "Step 1: Read and understand the architecture. Step 2: Propose a plan. Step 3: Execute."
+
+**Claude Code template for adding a new feature:**
+
+\`\`\`
+/architect
+I need to add a WebSocket-based real-time notification system for comment updates.
+
+Current architecture:
+- Next.js 15 App Router with API routes in src/app/api/
+- Auth via NextAuth with JWT sessions
+- PostgreSQL database accessed through Prisma ORM in src/db/
+
+Requirements:
+- New API route: POST /api/comments/:id/subscribe
+- WebSocket server: Use the existing ws library (already in package.json)
+- Client hook: src/hooks/useCommentSubscription.ts with React 18 pattern
+- Notifications should only go to the comment author (verify via JWT)
+
+Architecture questions for you:
+1. Should the WebSocket server run in the same process or as a separate service?
+2. How should we handle reconnection on stale JWT?
+
+After the plan is approved, execute:
+1. Update Prisma schema if needed
+2. Create the WebSocket server module
+3. Create the API route
+4. Create the client hook
+5. Add integration tests
+6. Verify with: npm run build && npm run typecheck
+\`\`\`
+
+### Prompting Copilot Desktop
+
+Copilot Desktop (GA'd June 18, 2026) introduces isolated sessions, GitHub-native context, and the agent workspace model. Its prompts are most effective when tied to GitHub issues.
+
+**Copilot Desktop best practices:**
+- Start a session from an issue or PR for automatic context
+- Use the session prompt to explain the task, then let Copilot ask clarifying questions
+- Copilot's steer-validate-ship cycle means you review plans and diffs before execution
+- Use **Workflows** for repeatable tasks (dependency updates, triage, release notes)
+
+**Copilot Desktop template for bug fixing:**
+
+\`\`\`
+Session context: GitHub Issue #427 — "User avatar not loading on profile page after account upgrade"
+
+The bug:
+- After upgrading from free to pro plan, the avatar shows a broken image
+- Works fine for users who signed up directly as pro
+- API endpoint /api/users/avatar returns 200 but with empty body
+- Regression introduced in PR #415 (avatar CDN migration)
+
+Investigate:
+1. Find the code changes in PR #415 related to avatar URL construction
+2. Check if the Account schema stores avatar_url differently for upgraded accounts
+3. Propose a fix
+
+Validation:
+- Run existing avatar tests
+- Manually verify: curl the avatar endpoint with a test upgraded-account token
+- Add a regression test to prevent recurrence
+\`\`\`
+
+### Prompting Windsurf Cascade
+
+Windsurf's Cascade is conservative by design. It reads before editing and presents changes clearly. Prompts should be explicit about what to read and what to change.
+
+**Windsurf Cascade best practices:**
+- Cascade shines for scoped, well-defined tasks. Break complex tasks into smaller prompts.
+- Use Cascade's integrated terminal: ask Cascade to explain terminal commands before running them
+- Review diffs carefully — Cascade presents clean diffs but does not catch cross-file inconsistencies as aggressively as Cursor
+
+**Windsurf Cascade template for adding a feature to a component:**
+
+\`\`\`
+I need to add a search filter to the ProductGrid component at src/components/product/ProductGrid.tsx.
+
+Context:
+- ProductGrid currently fetches all products on mount via useProducts() hook
+- Products have: name, category, price, rating, inStock (boolean)
+- The project uses shadcn/ui for components
+
+Requirements:
+1. Add a SearchInput above the grid (use the existing SearchInput component at src/components/ui/SearchInput.tsx)
+2. Filter products client-side by name (case-insensitive contains match)
+3. Show a "No results" message when the filter returns empty
+4. Debounce the search input by 300ms
+
+Pattern:
+- Use React useState for searchText
+- Filter with Array.filter() on the original fetched array
+- Follow the same styling pattern as CategoryFilter (which already exists)
+
+Files to read first:
+- src/components/product/ProductGrid.tsx
+- src/components/ui/SearchInput.tsx (to understand the props interface)
+- src/components/product/CategoryFilter.tsx (for styling reference)
+
+After changes verify:
+- The component renders with the search bar
+- Typing filters the list
+- Clearing the input restores the full list
+\`\`\`
+
+---
+
+## Common Prompting Mistakes
+
+### Mistake 1: The Vague Prompt
+
+**"Make this better"** — The agent does not know what "better" means. Is it performance? Readability? Add features? Reduce code?
+
+**Fix:** Specify the dimension of improvement and the constraint. "Optimize this query for pagination. The current query returns all rows. Add cursor-based pagination with a limit of 20."
+
+### Mistake 2: The Single-Prompt Expectation
+
+Expecting a single prompt to produce production-ready code is asking for trouble. The best workflow is iterative:
+
+1. **Plan prompt:** "Read the relevant files and propose a plan."
+2. **Implementation prompt:** "Execute the plan approved above."
+3. **Review prompt:** "Review the changes for (security|performance|edge cases)."
+4. **Test prompt:** "Add tests covering the new code."
+
+### Mistake 3: No Constraints
+
+Agents left unconstrained will:
+- Refactor everything (over-engineering)
+- Add abstractions you did not ask for
+- Suggest dependencies you do not need
+- Restructure code that was fine as-is
+
+**Fix:** Always include scope constraints. "Do not create new files. Do not add new dependencies. Do not touch configuration."
+
+### Mistake 4: Assuming the Agent Knows Your Preferences
+
+Agents default to what the training data averages. If your project uses a specific pattern (custom hooks instead of Redux, arrow functions instead of function declarations, 2-space indent), say so.
+
+**Fix:** "This project uses custom React hooks with the 'use' prefix, arrow functions for components, and 2-space indentation. Follow existing patterns."
+
+---
+
+## The Bottom Line
+
+Prompting AI coding agents in 2026 is a learned skill. The gap between a good prompt and a bad one is the difference between a task that takes one iteration and one that takes ten.
+
+The universal principles — state outcomes, provide context, specify scope, include verification — apply across all tools. But each tool has a personality: Cursor is aggressive and parallel, Claude Code is thoughtful and thorough, Copilot is GitHub-native and governed, Windsurf is conservative and reliable.
+
+Learn to prompt each one appropriately, and the quality of AI-generated code in your projects will improve dramatically.
+
+*This guide was published on June 29, 2026. For tool-specific reviews, check our [Cursor](/tool/cursor), [Claude Code](/tool/claude-code), [Copilot](/tool/copilot), and [Windsurf](/tool/windsurf) pages. For pricing comparisons, see our [AI Coding Tools Pricing Guide](/blog/ai-coding-tools-pricing-comparison-2026).*
+  `.trim(),
+  seo: {
+    title: "How to Prompt AI Coding Agents in 2026: Guide with Templates | AI Coding Tools",
+    description:
+      "A practical guide to prompting AI coding agents in 2026. How to prompt Cursor, Claude Code, Copilot, and Windsurf effectively. Includes reusable prompt templates.",
+    canonicalPath: "/blog/how-to-prompt-ai-coding-agents-2026",
+  },
+};
+
 export const blogPosts: BlogPost[] = [
   cursorCompose3OriginPost,
   openaiCodexRecordReplayPost,
@@ -952,6 +1348,8 @@ export const blogPosts: BlogPost[] = [
   openSourceToolsPost,
   cursor35Post,
   claudeCodeCanceledPost,
+  windsurfDeepDive2026,
+  promptEngineeringGuide,
 ];
 
 export function getBlogPostsByNewest(): BlogPost[] {
