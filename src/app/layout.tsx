@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     title: "AI Coding Tools Compared: Pricing, Features &amp; Reviews",
     description: "Compare AI coding assistants with source-backed pricing, scenario fit, and honest trade-offs.",
   },
+  other: {
+    "google-site-verification": "N21K5VoxWUyIIwGf5NZjvhvU2Ty_JC2EoVhMWPL-iro",
+  },
 };
 
 /**
