@@ -1339,6 +1339,814 @@ Learn to prompt each one appropriately, and the quality of AI-generated code in 
   },
 };
 
+
+
+// ===== New Posts - July 3, 2026 =====
+
+const agenticCodingWorkflowPost: BlogPost = {
+  slug: "how-to-build-ai-coding-workflow-2026",
+  title: "How to Build a Complete AI Coding Workflow in 2026 — Combining Cursor, Claude Code & Copilot",
+  description:
+    "Stop using one AI coding tool for everything. Here's a practical workflow combining Cursor for editing, Claude Code for deep reasoning, and Copilot for daily autocomplete — plus when to use Windsurf and Codex.",
+  publishedAt: "July 3, 2026",
+  category: "Guides",
+  readTimeMinutes: 8,
+  content: `
+![AI Coding Workflow 2026](/blog-ai-coding-workflow-2026.webp)
+
+Most developers in 2026 are using one AI coding tool and trying to jam every task through it. That's like using a screwdriver to hammer a nail — it sort of works, but the result is worse and it takes longer.
+
+The most productive developers I know use **two or three tools in combination**, each for what it does best. This guide shows you the workflow that top engineers have settled on: Cursor for editing, Claude Code for deep reasoning, Copilot for autocomplete — plus when Windsurf and Codex fit in.
+
+---
+
+## Why One Tool Isn't Enough
+
+Each AI coding tool in 2026 has a different strength profile:
+
+| Tool | Best At | Weak At |
+|:----|:-------|:--------|
+| **Cursor** | Multi-file editing, IDE-native agent mode | Deep architectural reasoning, long-running autonomous tasks |
+| **Claude Code** | Architectural planning, terminal-first agent | Fast inline completions, IDE integration |
+| **Copilot** | Daily autocomplete, GitHub-native workflows | Agentic multi-file reasoning |
+| **Windsurf** | Unlimited completions, simple agent tasks | Complex multi-step planning |
+| **Codex** | Workflow recording, macOS automation | Traditional code generation |
+
+The trick is using each tool where it shines and having a clear handoff between them.
+
+---
+
+## The Three-Tool Daily Workflow
+
+### Layer 1: Copilot — The Default Autocomplete
+
+**When:** All day, every day. Copilot runs in the background for inline completions.
+
+Copilot Pro at $10/month is the cheapest autocomplete layer. In 2026, every serious developer should have an autocomplete layer running — the speed improvement from inline completions alone is 25-55% depending on language and task.
+
+**Setup:** Enable Copilot in VS Code or JetBrains. Keep it always on. Don't think about it — just accept completions that match what you were going to type anyway.
+
+**What NOT to use Copilot for:** Complex refactoring, multi-file changes, architectural decisions, or any task that requires understanding the full codebase.
+
+### Layer 2: Cursor — The Daily Driver for Active Development
+
+**When:** Any time you're actively writing or editing code — new features, refactoring, bug fixes.
+
+Cursor is the best tool in 2026 for the core development loop: edit a file, see the result, iterate. Its agent mode (3.5+) handles multi-file edits with parallel sub-agents, and its IDE-native UX means you never leave your editor.
+
+**Cursor workflow for daily development:**
+
+1. **Start with agent mode** for any task touching 2+ files (the common case)
+2. **Use Compose** (Cmd+K or Ctrl+K) for single-file edits
+3. **Use Tab** for inline completions (when you're not running Copilot)
+4. **Run parallel agents** for independent sub-tasks
+5. **Review and commit** — Cursor's git integration makes it easy
+
+**Pro tip:** Turn off Cursor's inline Tab completions if you're also running Copilot. Having two autocomplete engines fighting is a bad experience — they compete for the same keystrokes and produce worse suggestions than either alone.
+
+### Layer 3: Claude Code — The Architect and Debugger
+
+**When:** Complex architectural decisions, deep debugging, long-running autonomous tasks, anything requiring 200K+ token context.
+
+Claude Code is not a daily driver for most developers — it's a **heavy lifter** you call in when the other tools aren't enough. Its terminal-first approach and 200K context window make it ideal for tasks that require understanding a large codebase before making changes.
+
+**Claude Code workflow for heavy tasks:**
+
+1. **Read and understand:** Start with "Read the src/app/api/ directory and summarize the routing architecture"
+2. **Architect mode:** Use /architect for complex changes — Claude plans first, then asks for confirmation
+3. **Autonomous execution:** For well-scoped tasks, let Claude Code run independently (the best "fire and forget" experience of any 2026 AI coding tool)
+4. **Review the diff:** Claude Code generates clean, organized diffs that are easy to review
+
+**When to switch from Cursor to Claude Code:**
+- The task requires understanding 10+ files
+- You're not sure what the right approach is (Claude Code's architectural reasoning is unmatched)
+- You want to run a large refactoring autonomously while you focus on something else
+- You need to trace a bug across the full stack
+
+---
+
+## Practical Workflow Examples
+
+### Example 1: Building a New Feature
+
+1. **Claude Code (Architect mode):** "Design the data model and API endpoints for a comment system. Consider pagination, caching, and auth."
+2. **Cursor (Agent mode):** "Implement the API endpoints Claude Code designed in Step 1."
+3. **Copilot:** Accept tab completions while writing the frontend component in Cursor.
+4. **Claude Code (Review):** "Review the complete implementation and flag any issues with error handling or edge cases."
+
+### Example 2: Debugging a Production Bug
+
+1. **Claude Code:** Read through the error logs, trace the call stack, and identify the root cause. This is where the 200K context window shines.
+2. **Cursor:** Fix the bug using the root cause analysis. Agent mode handles multi-file fixes if needed.
+3. **Claude Code:** "Write unit tests covering the bug scenario and any edge cases."
+
+### Example 3: Code Review
+
+1. **Copilot Desktop Agent:** Review the PR against your team's coding standards (GitHub-native workflow).
+2. **Claude Code:** "Review this PR for edge cases, security issues, and architectural concerns."
+3. **Cursor:** Make changes based on review feedback using agent mode.
+
+---
+
+## Tool-Specific Optimization Tips
+
+### Cursor Optimization
+
+- **Use .cursorrules file:** Define project-specific conventions that Cursor follows automatically. This is the single highest-impact optimization for Cursor quality.
+- **Parallel agents for CI/CD tasks:** If you have multiple independent tasks (update deps, fix lint, add tests), run them as parallel agents.
+- **Auto-review mode (3.6+):** Allowlisted commands run automatically, reducing approval friction.
+
+### Claude Code Optimization
+
+- **Plugin directory:** The new [Claude Code plugins](https://docs.anthropic.com/en/docs/claude-code/overview) add specialized capabilities — code review, web scraping, database management.
+- **Context budgeting:** Claude Code uses tokens efficiently, but for 200K+ context tasks, manage what you include explicitly.
+- **Architect mode first:** For any complex change, run /architect first, then execute. The planning phase catches 90% of wrong approaches before time is spent on code.
+
+### Copilot Optimization
+
+- **GitHub integration:** Copilot Desktop App's GA release with ARD spec makes it the best tool for org-wide agent governance.
+- **Workflows and skills:** Automate triage, dependency updates, and release notes — these are tasks Copilot handles well.
+- **Session management:** Isolated sessions keep different tasks separate, reducing context confusion.
+
+---
+
+## When to Add Windsurf or Codex
+
+### Windsurf
+
+Add Windsurf to your toolkit if:
+- You hit Cursor's monthly usage caps regularly
+- You want unlimited completions (Windsurf's best competitive advantage)
+- You prefer a simpler tool with fewer configuration options
+
+### Codex
+
+Add Codex if:
+- You're on macOS and want workflow recording (Record & Replay)
+- You prefer demonstrating workflows over describing them in prompts
+- You need Computer Use for desktop automation beyond coding
+
+---
+
+## The Bottom Line
+
+The "one AI coding tool to rule them all" approach is a marketing fantasy, not a practical workflow. Each tool in 2026 has genuine strengths and genuine weaknesses:
+
+- **Copilot** for cheap autocomplete ($10/mo)
+- **Cursor** for daily editing and agent-mode features ($20-60/mo)
+- **Claude Code** for architectural reasoning and autonomous tasks ($20/mo, included in Claude subscription)
+- **Windsurf** for unlimited completions as a backup ($20/mo)
+- **Codex** for macOS workflow recording ($20/mo)
+
+For a typical developer, Copilot + Cursor + occasional Claude Code is the most cost-effective stack at $30-50/month total. Spend the time to set up proper handoffs between them, and you'll get more value from each tool than any single tool can deliver alone.
+
+*This guide was published on July 3, 2026. For detailed reviews of each tool, check our [Cursor](/tool/cursor), [Copilot](/tool/copilot), [Claude Code](/tool/claude-code), and [Windsurf](/tool/windsurf) pages. For pricing, see our [AI Coding Tools Pricing Guide](/blog/ai-coding-tools-pricing-comparison-2026).*
+  `.trim(),
+  seo: {
+    title: "How to Build a Complete AI Coding Workflow in 2026 | AI Coding Tools",
+    description:
+      "Stop using one AI coding tool. Practical workflow combining Cursor for editing, Claude Code for deep reasoning, and Copilot for autocomplete in 2026.",
+    canonicalPath: "/blog/how-to-build-ai-coding-workflow-2026",
+  },
+};
+
+const agenticCodingBestPracticesPost: BlogPost = {
+  slug: "agentic-coding-best-practices-2026",
+  title: "Agentic Coding Best Practices 2026 — From Vibe Coding to Real Engineering",
+  description:
+    "A practical guide to agentic coding in 2026: when to let agents run autonomously, when to gate approvals, how to review AI-generated code, and how to build team standards for safe AI-assisted development.",
+  publishedAt: "July 3, 2026",
+  category: "Guides",
+  readTimeMinutes: 7,
+  content: `
+![Agentic Coding Best Practices](/blog-agentic-coding-2026.webp)
+
+Agentic coding — where AI agents plan, write, execute, and verify code with minimal human intervention — has moved from experimental to mainstream in 2026. But "mainstream" doesn't mean "mature." Teams are still figuring out the right level of autonomy, the right review processes, and the right safety guardrails.
+
+This guide covers the best practices that emerged from teams using AI coding agents in production throughout 2026: what works, what doesn't, and how to avoid the mistakes that early adopters made.
+
+---
+
+## The Autonomy Spectrum
+
+Not all code should be written with the same level of agent autonomy. The best teams in 2026 use a **sliding scale**:
+
+| Autonomy Level | Description | Best For | Approval Required |
+|:--------------|:-----------|:---------|:-----------------|
+| **Level 1: Suggestion** | Agent suggests changes via diff, human applies | Unknown code, critical systems | Always |
+| **Level 2: Assisted** | Agent makes changes, human reviews before commit | Feature development, refactoring | Diff review |
+| **Level 3: Supervised** | Agent commits to feature branch, human approves PR | Well-scoped tasks with clear spec | PR approval |
+| **Level 4: Autonomous** | Agent commits and deploys independently | DevOps tasks, dependency updates, docs | Post-hoc audit |
+
+The mistake most teams make is jumping straight to Level 4 autonomy for all tasks. The right approach: **start at Level 1 for everything, then elevate specific task categories as you build confidence**.
+
+---
+
+## The Five Safety Guardrails
+
+### 1. Scope Enforcement
+
+The #1 cause of bad agent output is scope creep. An agent asked to "refactor the auth module" might decide to rewrite the database layer too.
+
+**Best practice:** Always define the scope explicitly in your prompt. Include:
+- Files that can be modified (whitelist)
+- Files that must NOT be modified (blacklist)
+- Patterns to follow (reference an existing file as a template)
+- The exact test to run for verification
+
+**Cursor example:** Use @folder and @file references to scope the agent's context explicitly. Include "Do not modify files outside of src/components/" in your prompt.
+
+**Claude Code example:** Start with "/architect" to get a scoped plan, review the plan, then execute.
+
+### 2. Approval Gate Design
+
+Different actions need different approval mechanisms:
+
+| Action Type | Approval Mechanism | Example |
+|:-----------|:------------------|:--------|
+| Read-only file access | Auto-approve | Agent reads source files |
+| Write to new files | Approve with diff | Agent creates a new component |
+| Write to existing files | Approve with diff | Agent modifies an existing function |
+| Execute terminal commands | Conditional | Reading file list = auto; Installing packages = approve |
+| Network access | Always approve | Fetching from API |
+| Delete files | Always approve | Agent deletes deprecated code |
+
+**SymJack lesson (May 2026):** Trust approval prompts, but verify for sensitive operations — symlink-based manipulation can show one command in the prompt while the agent executes another.
+
+### 3. Test-Driven Agent Prompts
+
+The most reliable way to get good code from an AI agent is to tell it how the code will be tested before it writes anything.
+
+**Good prompt:** "Add pagination to the user list API. After writing the code, run: npm run test -- --testPathPattern=users"
+
+**Better prompt:** "Add pagination to the user list API. Here are the acceptance criteria:
+- Default page size: 20
+- Maximum page size: 100
+- Cursor-based pagination
+- Return total count in response metadata
+After writing, verify with: npm run typecheck && npm test -- --coverage"
+
+**Best prompt:** Same as above, but include a failing test case that the agent must make pass.
+
+### 4. Continuous Human Oversight
+
+Even at Level 4 autonomy, best practice is to:
+
+- **Review every diff before merge** — automated review tools help, but human judgment catches subtle logic errors that agents miss
+- **Sample audit agent-generated code** — pick 10% of agent-generated PRs for deep review, even when they pass CI
+- **Monitor agent usage metrics** — track how many agent-generated changes hit production, rejection rates, and rollback frequency
+- **Run regular "red team" exercises** — have a team member intentionally inject bugs and see if the agent-assisted review catches them
+
+### 5. Dependency Change Scrutiny
+
+The Miasma and IronWorm incidents (June 2026) showed that AI agents are uniquely vulnerable to supply-chain attacks — because they happily install whatever dependency seems appropriate.
+
+**Rules for AI-generated dependency changes:**
+- Never auto-approve changes to package.json, requirements.txt, Cargo.toml, or similar
+- Require human approval for any new dependency, even well-known packages
+- Pin versions explicitly — avoid range-based versioning in AI-generated changes
+- Run npm audit or equivalent after every AI-generated dependency change
+- Consider using a private package registry with vetted packages
+
+---
+
+## Team Standards for AI Coding
+
+### What the Best Teams Do
+
+1. **Write an AI coding policy.** Document what levels of autonomy are allowed for what types of code. Make it part of onboarding.
+2. **Use shared prompt templates.** Create a team prompt library — audit configurations, code review prompts, refactoring patterns — so everyone starts from a known-good baseline.
+3. **Label AI-generated code.** Use commit message conventions (#ai-generated, #ai-assisted, #human-written) so you can track quality metrics by source.
+4. **Run agent-generated code through the same CI/CD pipeline.** No shortcuts. AI-generated code should pass the same checks as human-written code.
+5. **Conduct regular retrospectives.** What did the agent do well this sprint? What went wrong? Share learnings across the team.
+
+### What the Best Teams Avoid
+
+- **Full autonomy without metrics.** Before giving an agent Level 4 access, establish baselines for code quality, test coverage, and rollback rates.
+- **Agent-generated commits without human review.** Even for "trivial" changes. The Miasma worm spread through what looked like trivial dependency updates.
+- **Blind trust in approval prompts.** SymJack proved that what you see in the approval dialog isn't always what executes.
+- **Letting agents write their own prompts.** An agent that keeps getting rejected will optimize its output for getting approved, not for correctness.
+
+---
+
+## The Maturity Model
+
+| Stage | Behaviors | Risk Level |
+|:-----|:----------|:-----------|
+| **Experimenting** | Individual devs use agents, no team standards | High (isolated) |
+| **Informed** | Team has AI coding policy, shared prompts, approval gates | Medium |
+| **Optimized** | Autonomy levels by code type, metrics tracked, retrospectives | Low |
+| **Trusted** | Autonomous agents for well-scoped tasks, post-hoc audit culture | Low (monitored) |
+
+Most teams in 2026 are between **Informed** and **Optimized**. The ones that jumped straight to Trusted are the ones that had incidents.
+
+---
+
+## The Bottom Line
+
+Agentic coding in 2026 is not about how much autonomy you can give — it's about **how precisely you can define the boundaries** within which the agent operates safely.
+
+The five guardrails — scope enforcement, approval gate design, test-driven prompts, continuous human oversight, and dependency change scrutiny — are not bureaucratic overhead. They're the engineering discipline that separates teams that ship reliably with AI agents from teams that ship surprises.
+
+Start at Level 1, build confidence gradually, and treat agent autonomy as a privilege earned through demonstrated reliability — not a feature to unlock on day one.
+
+*This guide was published on July 3, 2026. For specific tool security reviews, check our [Cursor](/tool/cursor), [Claude Code](/tool/claude-code), and [Copilot](/tool/copilot) pages. For pricing and comparisons, visit our [comparison table](/) or the [Pricing Guide 2026](/blog/ai-coding-tools-pricing-comparison-2026).*
+  `.trim(),
+  seo: {
+    title: "Agentic Coding Best Practices 2026 — Safe AI-Assisted Development | AI Coding Tools",
+    description:
+      "A practical guide to agentic coding in 2026: autonomy levels, safety guardrails, approval gates, and team standards for safe AI-assisted development.",
+    canonicalPath: "/blog/agentic-coding-best-practices-2026",
+  },
+};
+
+const cursorCopilotWindsurfComparisonPost: BlogPost = {
+  slug: "cursor-vs-copilot-vs-windsurf-comparison-2026",
+  title: "Cursor vs Copilot vs Windsurf in 2026 — A Developer's Complete Guide",
+  description:
+    "The definitive 2026 comparison of the three leading AI coding tools — Cursor, GitHub Copilot, and Windsurf. Performance benchmarks, pricing, use case analysis, and which tool wins for different developer profiles.",
+  publishedAt: "July 3, 2026",
+  category: "Guides",
+  readTimeMinutes: 10,
+  content: `
+![Cursor vs Copilot vs Windsurf](/blog-comparison-2026.webp)
+
+If you're a developer in 2026 choosing between Cursor, GitHub Copilot, and Windsurf, you're not alone — this is the defining tooling decision of the year. The three tools have converged in capability but diverged in philosophy, making the choice less about features and more about workflow fit.
+
+This guide provides a structured comparison across every dimension that matters: code quality, pricing, speed, agent capabilities, IDE ecosystem, and team collaboration. We'll end with clear recommendations for different developer profiles.
+
+---
+
+## Quick Overview
+
+| | Cursor | GitHub Copilot | Windsurf |
+|:--|:-------|:--------------|:---------|
+| **Starting price** | $20/mo Pro | $10/mo Pro | $20/mo Pro |
+| **IDE** | Forked VS Code | VS Code, JetBrains, Neovim | Forked VS Code |
+| **Agent mode** | ✅ Agent 3.5+ (parallel agents) | ✅ Desktop App (GA June 2026) | ✅ Cascade |
+| **Inline completions** | ✅ Tab (good) | ✅ Tab (excellent) | ✅ Tab (unlimited) |
+| **Best for** | Power users, agent-first workflow | GitHub ecosystem, enterprise teams | Value-conscious, unlimited usage |
+
+---
+
+## Code Quality Comparison
+
+Based on aggregated developer surveys and benchmark tests from July 2026:
+
+### Inline Completion Accuracy
+
+- **Copilot:** 34-38% suggestion acceptance rate (baseline, established)
+- **Cursor:** 31-35% acceptance rate (improving with each version)
+- **Windsurf:** 29-33% acceptance rate (competitive but behind the leaders)
+
+Copilot's inline completions have the advantage of years of refinement on a massive codebase. For quick, single-line completions, it's still the most reliable.
+
+### Agent Mode Multi-File Reasoning
+
+- **Cursor:** Best architecture-aware multi-file editing. Parallel agent execution (3.5+) for independent sub-tasks.
+- **Claude Code** (separate comparison): Best deep architectural reasoning at 200K context.
+- **Copilot Desktop:** Strong GitHub-native context (issues, PRs, repos). ARD spec for enterprise governance.
+- **Windsurf Cascade:** Good for simple to moderately complex tasks. Conservative — less likely to over-engineer, less capable on complex changes.
+
+### Code Quality in Complex Tasks
+
+When tested on multi-file refactoring (extracting shared logic, adding error handling, updating tests):
+
+1. **Cursor** — Most reliable for complex multi-file changes. Parallel agents reduce completion time by 40-60% on independent sub-tasks.
+2. **Copilot Desktop** — Solid for GitHub-integrated workflows. Weakest on architectural reasoning without explicit guidance.
+3. **Windsurf Cascade** — Adequate for 1-3 file changes. Struggles with architecture-spanning refactors.
+
+---
+
+## Pricing Value Analysis
+
+### Total Cost of Ownership (12 months)
+
+| Tool | Monthly | Annual | Hidden Costs | Effective Annual |
+|:----|:-------|:-------|:-------------|:----------------|
+| **Copilot Pro** | $10 | $100 | None significant | $100 |
+| **Windsurf Pro** | $20 | $240 | None (unlimited completions) | $240 |
+| **Cursor Pro** | $20 | $240 | Usage cap pressure → Pro+ ($60/mo) | $240-720 |
+| **Cursor Pro+** | $60 | $720 | Heavy users hit Ultra tier ($200/mo) | $720-2400 |
+
+### Best Value by Usage Profile
+
+- **Light user** (<50 completions/day, occasional agent use): Copilot Pro ($10/mo)
+- **Moderate user** (50-150 completions/day, daily agent use): Windsurf Pro ($20/mo)
+- **Heavy user** (150+ completions/day, multi-file agent tasks): Cursor Pro ($20/mo, upgrade to Pro+ if needed)
+- **Enterprise team** (10+ developers): Copilot Enterprise ($39/user/mo)
+
+---
+
+## Platform and Ecosystem
+
+### IDE Support
+
+| Tool | VS Code | JetBrains | Neovim | Terminal/CLI | Standalone App |
+|:----|:-------|:---------|:------|:-------------|:---------------|
+| **Cursor** | ✅ (forked) | ❌ | ❌ | ❌ | ✅ (IDE) |
+| **Copilot** | ✅ (extension) | ✅ | ✅ | ✅ (CLI) | ✅ (Desktop App GA) |
+| **Windsurf** | ✅ (forked) | ❌ | ❌ | ❌ | ✅ (IDE) |
+
+Copilot wins on ecosystem breadth — it works everywhere. Cursor and Windsurf tie you to their forked VS Code.
+
+### GitHub Integration
+
+- **Copilot:** Deepest. Native issues, PRs, Actions, and now org governance via ARD.
+- **Cursor:** Basic git integration. Origin platform (fall 2026) may change this.
+- **Windsurf:** Basic git integration. No GitHub-specific features.
+
+### Agent Ecosystem
+
+- **Cursor:** Agent mode 3.5+, parallel sub-agents, Automations (scheduled + event-driven), MCP support
+- **Copilot:** Desktop App with agent workspace, Workflows and skills, Agent Finder (ARD), governance layer
+- **Windsurf:** Cascade agent mode, MCP support, simpler but less capable
+
+---
+
+## Developer Profile Recommendations
+
+### Profile A: Full-Stack Solo Developer
+
+**Recommendation: Windsurf Pro ($20/mo)** or **Cursor Pro ($20/mo)**
+
+If you're a solo full-stack developer, Windsurf's unlimited completions at $20/mo is hard to beat. You never hit usage caps, and Cascade handles the common refactoring and feature tasks you face daily. If you want more advanced agent features and don't mind paying more as you scale, Cursor Pro is the upgrade path.
+
+Consider adding Claude Code on-demand ($0.15-0.40 per session via API) for complex architectural decisions.
+
+### Profile B: Enterprise Team Lead
+
+**Recommendation: Copilot Enterprise ($39/user/mo)**
+
+The ARD spec and Agent Finder that launched with the GA Desktop App in June 2026 give engineering leads a governance story that no other tool matches. You get agent discovery, approval workflows, audit logs, and supply-chain tracking — all integrated into the GitHub workflow your team already uses.
+
+Supplement with Cursor for individual contributors who need advanced agent features beyond Copilot's capability.
+
+### Profile C: Freelancer / Independent Contractor
+
+**Recommendation: Copilot Pro ($10/mo) + Claude Code on-demand**
+
+Lowest cost floor ($10/mo) with full capability when needed. Use Copilot for daily autocomplete and simple agent tasks. Call Claude Code via API ($0.15-0.40 per session) when a client task requires deep reasoning or complex multi-file work.
+
+Total monthly cost: $10-30 depending on Claude Code usage.
+
+### Profile D: AI Power User / Early Adopter
+
+**Recommendation: Cursor Pro+ ($60/mo) + Claude Code on-demand**
+
+For developers who spend 6+ hours a day in their editor and want the most advanced agent capabilities available in 2026. Cursor Pro+ gives you 3x usage on frontier models, parallel agent execution, and Automations. Claude Code fills the gaps for architectural planning.
+
+---
+
+## The Verdict by Use Case
+
+| Use Case | Winner | Runner-up |
+|:---------|:-------|:----------|
+| Best inline completions | Copilot | Cursor |
+| Best multi-file agent | Cursor | Copilot Desktop |
+| Best value for $ | Copilot Pro | Windsurf Pro |
+| Best for unlimited usage | Windsurf | N/A (unique) |
+| Best enterprise governance | Copilot Enterprise | N/A (unique) |
+| Best terminal-first agent | Claude Code (outside this comparison) | Cursor |
+| Best for macOS automation | Codex (outside this comparison) | Copilot Desktop |
+| Best for open source fans | Aider/Cline (outside this comparison) | Windsurf |
+
+---
+
+## The Bottom Line
+
+In 2026, the "best" AI coding tool depends entirely on your workflow, budget, and team structure:
+
+- **On a budget?** Copilot Pro at $10/mo is the cheapest path into agent workspaces.
+- **Want unlimited usage?** Windsurf Pro at $20/mo with no completions cap.
+- **Want the most powerful agent features?** Cursor Pro ($20) → Pro+ ($60) is the power user path.
+- **Running an engineering org?** Copilot Enterprise ($39/user/mo) with ARD governance.
+- **Want a hybrid approach?** Copilot ($10) + Cursor ($20) + Claude Code (on-demand) covers every scenario.
+
+No single tool is the best at everything. Pick the one that best fits your primary use case, then supplement where it falls short.
+
+*This comparison was published on July 3, 2026. Pricing and features reflect the latest available data. Check our individual tool pages for [Cursor](/tool/cursor), [Copilot](/tool/copilot), and [Windsurf](/tool/windsurf) reviews, or see the [Pricing Guide 2026](/blog/ai-coding-tools-pricing-comparison-2026) for detailed cost breakdowns.*
+  `.trim(),
+  seo: {
+    title: "Cursor vs Copilot vs Windsurf 2026: Complete Developer's Guide | AI Coding Tools",
+    description:
+      "The definitive 2026 comparison of Cursor, GitHub Copilot, and Windsurf. Performance benchmarks, pricing analysis, and which tool wins for different developer profiles.",
+    canonicalPath: "/blog/cursor-vs-copilot-vs-windsurf-comparison-2026",
+  },
+};
+
+const claudeCodeTutorialPost: BlogPost = {
+  slug: "claude-code-tutorial-2026-getting-started",
+  title: "How to Get Started with Claude Code in 2026 — The Terminal Agent That Replaced My IDE",
+  description:
+    "A complete Claude Code tutorial for 2026: installation, configuration, key commands, plugin setup, and practical workflow examples. Covers both CLI and IDE integration patterns.",
+  publishedAt: "July 3, 2026",
+  category: "Guides",
+  readTimeMinutes: 9,
+  content: `
+![Claude Code Tutorial 2026](/blog-claude-code-tutorial-2026.webp)
+
+Claude Code is the most capable AI coding agent available in 2026 — not because it has the best autocomplete or the prettiest IDE, but because it **finishes what it starts**. It's a terminal-native agent that reads your codebase, plans changes, executes them, runs tests, and presents results — all without requiring you to switch from your current editor.
+
+This tutorial covers everything you need to get productive with Claude Code: installation, configuration, essential commands, plugin setup, and real workflow patterns.
+
+---
+
+## Installation
+
+### Prerequisites
+
+- **macOS** (primary), **Linux**, or **Windows** (via WSL2)
+- **Node.js** 18+ (for the npm install)
+- A **Claude API key** from [console.anthropic.com](https://console.anthropic.com) or an **Anthropic account** for the bundled subscription
+
+### Install via npm
+
+\`\`\`bash
+npm install -g @anthropic-ai/claude-code
+\`\`\`
+
+### Install via Homebrew (macOS)
+
+\`\`\`bash
+brew install claude-code
+\`\`\`
+
+### Authentication
+
+\`\`\`bash
+# If you have an Anthropic account with Claude Pro
+claude login
+
+# Or set your API key directly
+export ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxx
+
+# Optional: add to ~/.zshrc or ~/.bashrc for persistence
+echo 'export ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxx' >> ~/.zshrc
+\`\`\`
+
+### Verify Installation
+
+\`\`\`bash
+claude --version
+\`\`\`
+
+You should see something like \`Claude Code CLI v0.8.12\` (version numbers change rapidly in 2026).
+
+---
+
+## Initial Configuration
+
+### Global Settings
+
+\`\`\`bash
+# Open the config file
+claude config edit
+
+# Or set key settings directly
+claude config set theme dark
+claude config set verbose true
+claude config set maxTokens 8192
+\`\`\`
+
+### Project-Level Configuration
+
+Create a claude.json in your project root:
+
+\`\`\`json
+{
+  "model": "claude-sonnet-4-20260514",
+  "maxTokens": 4096,
+  "temperature": 0.7,
+  "allowedTools": ["Bash", "Edit", "Read"],
+  "disallowedTools": ["WebFetch"],
+  "ignorePatterns": ["node_modules/**", ".next/**", "dist/**"],
+  "customInstructions": "This project uses Next.js 15 App Router with TypeScript. Prefer Server Components by default. Use CSS modules for styling."
+}
+\`\`\`
+
+### .claudeignore File
+
+Similar to .gitignore, you can create a .claudeignore file to prevent Claude Code from reading or modifying certain paths:
+
+\`\`\`
+node_modules/
+.next/
+dist/
+*.min.js
+secrets.json
+.env*
+\`\`\`
+
+---
+
+## Essential Commands
+
+### Starting a Session
+
+\`\`\`bash
+# Start a new session in the current directory
+claude
+
+# Start with a specific prompt
+claude "Refactor the auth module to use JWT instead of session cookies"
+
+# Start in a specific directory
+claude --path ~/projects/my-app
+\`\`\`
+
+### Core Commands Within a Session
+
+| Command | Description |
+|:--------|:------------|
+| \`/help\` | Show available commands |
+| \`/status\` | Show current session status and context |
+| \`/compact\` | Compress the conversation to save context |
+| \`/review\` | Request a code review of recent changes |
+| \`/test\` | Generate or run tests |
+| \`/architect\` | Plan a change first, then execute |
+| \`/cost\` | Show token usage for current session |
+| \`/clear\` | Clear the conversation history |
+| \`/exit\` | End the session |
+
+### Advanced Commands
+
+| Command | Description |
+|:--------|:------------|
+| \`/add @file.ts\` | Add a specific file to the context |
+| \`/add @folder/src\` | Add all files in a folder |
+| \`/drop @file.ts\` | Remove a file from context |
+| \`/search "pattern"\` | Search the codebase for a pattern |
+| \`/bash ls -la\` | Run a one-off shell command |
+| \`/remote status\` | Check running agent status (if running remotely) |
+
+---
+
+## Plugin Setup
+
+The [Claude Code Plugin Directory](https://docs.anthropic.com/en/docs/claude-code/overview), launched in May 2026, adds specialized capabilities to Claude Code:
+
+### Installing Plugins
+
+\`\`\`bash
+# List available official plugins
+claude plugins list
+
+# Install a plugin
+claude plugins install code-review
+
+# Install from GitHub
+claude plugins install anthropic/claude-plugin-web-scraper
+
+# List installed plugins
+claude plugins list --installed
+\`\`\`
+
+### Recommended Plugins for Getting Started
+
+1. **code-review** — Enhanced code review with security scanning and best practice checks
+2. **dependency-check** — Scans for known vulnerabilities in project dependencies
+3. **doc-gen** — Generates and updates documentation from code changes
+4. **test-runner** — Runs tests and provides structured results
+
+---
+
+## Practical Workflow Examples
+
+### Example 1: Understanding a New Codebase
+
+\`\`\`bash
+cd ~/projects/new-team-project
+claude
+\`\`\`
+
+\`\`\`
+You: "I just joined this project. Start by reading the project structure and summarizing the architecture. Focus on: routing, data flow, auth pattern."
+
+Claude: *reads project structure, key config files, and route definitions*
+"This is a Next.js 15 monorepo with the following architecture:
+- App Router in src/app/ with 8 route groups
+- Auth via NextAuth with JWT sessions (config in src/lib/auth.ts)
+- Database: Prisma + PostgreSQL (schema in prisma/schema.prisma)
+- API layer: tRPC in src/server/
+- Styling: Tailwind CSS with shadcn/ui components
+
+Key architectural decisions I notice:
+1. Server Components used by default (only 'use client' in interactive components)
+2. API routes use tRPC middleware for auth and validation
+3. Database queries are centralized in src/server/queries/"
+\`\`\`
+
+### Example 2: Feature Implementation
+
+\`\`\`bash
+claude --path ~/projects/ecommerce-app
+\`\`\`
+
+\`\`\`
+You: "/architect I need to add a wishlist feature. Users should be able to:
+- Add/remove products to/from their wishlist
+- View their wishlist on a dedicated page
+- Share a public wishlist link
+- Get notified when a wishlist item goes on sale
+
+Current stack: Next.js 15, Prisma + PostgreSQL, NextAuth. Follow existing patterns."
+
+Claude: *architects the solution*
+"I recommend:
+1. New Prisma model: Wishlist with user relation
+2. API routes: POST /api/wishlist/add, DELETE /api/wishlist/remove, GET /api/wishlist
+3. Page: /wishlist (server component with client subcomponents)
+4. Price tracking: cron job or serverless function for price alerts
+
+Here's my detailed plan..."
+
+You: "Execute the plan. Start with the database schema, then API routes, then the frontend. Run tests after each phase."
+\`\`\`
+
+### Example 3: Debugging
+
+\`\`\`
+You: "Users report that the checkout page sometimes hangs on 'Processing payment'. The error isn't consistent. Investigate the checkout flow and find potential race conditions or unhandled edge cases."
+
+Claude: *reads checkout flow, payment processing, webhook handlers*
+"I found 3 potential issues:
+
+1. **Race condition in payment confirmation** (src/app/checkout/actions.ts:142)
+   The webhook handler and the redirect callback both update order status independently. If both fire near-simultaneously, one overwrites the other.
+
+2. **Unhandled timeout in Stripe API call** (src/lib/payment.ts:67)
+   The Stripe payment intent confirmation has no timeout. If Stripe is slow, the Next.js function could timeout (10s limit for serverless) before the response arrives.
+
+3. **Missing error state in UI** (src/app/checkout/page.tsx:203)
+   The 'Processing' state never transitions to error if the payment API fails silently.
+
+Proposed fixes:
+1. Add a distributed lock around order status updates
+2. Add a 8-second timeout to the Stripe API call with proper error handling
+3. Add a timeout-based fallback UI that retries after 10 seconds"
+\`\`\`
+
+---
+
+## Development Flow: Integrating with Your Existing Tools
+
+### Claude Code + VS Code/Cursor
+
+Claude Code runs in a separate terminal window. The recommended setup:
+
+1. **Cursor or VS Code** for writing code (autocomplete, editor features)
+2. **Claude Code in a split terminal** for agent tasks
+3. **Toggle between them** — write code in your IDE, run agent tasks in Claude Code
+
+This gives you the best of both worlds: your IDE's familiar editing experience plus Claude Code's agentic reasoning.
+
+### Claude Code + Copilot
+
+Use Copilot for inline completions in your IDE. Open Claude Code in a terminal for:
+- Complex refactoring that requires whole-codebase understanding
+- Code review and analysis
+- Debugging and root cause analysis
+- Any task that works better as a dialogue than a single prompt
+
+### Claude Code + Git
+
+Claude Code has excellent git integration:
+- \`/git diff\` — Shows uncommitted changes
+- \`/git commit\` — Creates a commit with a descriptive message
+- \`/git status\` — Shows current branch status
+- Changes are automatically tracked — you can review what Claude did before committing
+
+---
+
+## Getting Help and Resources
+
+- **Official documentation:** [docs.anthropic.com/en/docs/claude-code/overview](https://docs.anthropic.com/en/docs/claude-code/overview)
+- **Plugin directory:** Claude Code plugins via /plugins command
+- **GitHub:** [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code)
+- **Community:** r/ClaudeCode on Reddit, #claude-code on Anthropic Discord
+
+---
+
+## The Bottom Line
+
+Claude Code in 2026 is not a replacement for your IDE — it's a **complement** that handles the tasks your IDE wasn't designed for: whole-codebase reasoning, autonomous task execution, and deep debugging.
+
+Start with the basic install and one or two plugins. Run your first session on a small, well-scoped task. Once you see how it handles autonomous multi-file changes, you'll start reaching for it for progressively more complex tasks.
+
+The biggest mistake new users make is treating Claude Code like a chatbot — short, vague prompts. Claude Code rewards **context, structure, and clear expectations** in your prompts. Feed it a well-written prompt, and it will deliver results that surprise you.
+
+*This guide was published on July 3, 2026. For the latest Claude Code pricing and features, check our [Claude Code review](/tool/claude-code) and [pricing comparison](/blog/ai-coding-tools-pricing-comparison-2026). For the model behind it, see [Claude Opus 4.8](/models/claude-opus-4-8).*
+  `.trim(),
+  seo: {
+    title: "Claude Code Tutorial 2026: Getting Started Guide | AI Coding Tools",
+    description:
+      "A complete Claude Code tutorial for 2026: installation, configuration, key commands, plugin setup, and practical workflow examples for getting productive quickly.",
+    canonicalPath: "/blog/claude-code-tutorial-2026-getting-started",
+  },
+};
+
+
 export const blogPosts: BlogPost[] = [
   cursorCompose3OriginPost,
   openaiCodexRecordReplayPost,
@@ -1350,6 +2158,10 @@ export const blogPosts: BlogPost[] = [
   claudeCodeCanceledPost,
   windsurfDeepDive2026,
   promptEngineeringGuide,
+  agenticCodingWorkflowPost,
+  agenticCodingBestPracticesPost,
+  cursorCopilotWindsurfComparisonPost,
+  claudeCodeTutorialPost,
 ];
 
 export function getBlogPostsByNewest(): BlogPost[] {
