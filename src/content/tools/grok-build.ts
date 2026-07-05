@@ -153,7 +153,7 @@ export const grokBuildTool: ToolDetailEntry = {
     {
       title: "Try plan mode on a multi-file task",
       duration: "10 min",
-      description: "Run `grok --plan \"Refactor X across 3 files\"` to see the multi-agent coordination in action before approving changes.",
+      description: "Run  The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.`grok --plan \"Refactor X across 3 files\"` to see the multi-agent coordination in action before approving changes.",
     },
   ],
   relatedTools: [

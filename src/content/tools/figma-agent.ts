@@ -23,7 +23,7 @@ export const figmaAgentTool: ToolDetailEntry = {
     {
       title: "On-canvas AI collaboration",
       description:
-        "Works directly on the Figma canvas inside the same file as your team. No separate setup, no context switching—just open the agent in the left rail and start prompting.",
+        "Works directly on the Figma canvas inside the same file as your team. No separate setup, no context switching—just open the agent in the left rail and start prompting. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "Design system awareness",

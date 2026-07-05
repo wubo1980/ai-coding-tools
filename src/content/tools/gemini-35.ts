@@ -23,7 +23,7 @@ export const gemini35Tool: ToolDetailEntry = {
     {
       title: "1.05M token context window",
       description:
-        "Native support for 1M tokens input with 65K tokens output. Large enough to ingest an entire mid-size codebase in a single pass.",
+        "Native support for 1M tokens input with 65K tokens output. Large enough to ingest an entire mid-size codebase in a single pass. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "State-of-the-art agentic coding performance",

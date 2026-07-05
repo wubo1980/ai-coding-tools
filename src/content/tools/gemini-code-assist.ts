@@ -23,7 +23,7 @@ export const geminiCodeAssistTool: ToolDetailEntry = {
     {
       title: "Gemini-powered code completion and chat",
       description:
-        "Full inline code completions and conversational chat backed by Gemini models. With Gemini 3.5 Flash integration, completions are fast and agentic coding is supported within the IDE.",
+        "Full inline code completions and conversational chat backed by Gemini models. With Gemini 3.5 Flash integration, completions are fast and agentic coding is supported within the IDE. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "Large-context analysis (1M+ tokens)",

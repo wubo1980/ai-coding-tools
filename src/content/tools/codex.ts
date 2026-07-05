@@ -23,7 +23,7 @@ export const codexTool: ToolDetailEntry = {
     {
       title: "Record & Replay (June 2026)",
       description:
-        "The flagship feature: perform a workflow once on macOS while Codex records every action (file edits, terminal commands, UI interactions). Replay it anytime as a reusable automation skill. Recorded skills are semantic, not positional — they adapt to changing context.",
+        "The flagship feature: perform a workflow once on macOS while Codex records every action (file edits, terminal commands, UI interactions). Replay it anytime as a reusable automation skill. Recorded skills are semantic, not positional — they adapt to changing context. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "macOS desktop app",

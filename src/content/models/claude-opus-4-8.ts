@@ -25,7 +25,7 @@ export const claudeOpus48: ToolDetailEntry = {
     {
       title: "Self-Correction & Reliability",
       description:
-        "Unlike previous models that rush to confident wrong answers, Opus 4.8 flags uncertainties, catches its own bugs, and pushes back when a plan is not sound. This is the single biggest quality-of-life improvement over Opus 4.7.",
+        "Unlike previous models that rush to confident wrong answers, Opus 4.8 flags uncertainties, catches its own bugs, and pushes back when a plan is not sound. This is the single biggest quality-of-life improvement over Opus 4.7. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "Super-Agent Performance",

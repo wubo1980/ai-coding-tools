@@ -23,7 +23,7 @@ export const cursorTool: ToolDetailEntry = {
     {
       title: "Agent-driven editing",
       description:
-        "Lets you describe a change and have the tool plan and apply edits across multiple files, which reduces the overhead of manual file-by-file coordination.",
+        "Lets you describe a change and have the tool plan and apply edits across multiple files, which reduces the overhead of manual file-by-file coordination. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "Codebase indexing",

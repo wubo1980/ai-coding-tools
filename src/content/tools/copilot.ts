@@ -26,7 +26,7 @@ export const copilotTool: ToolDetailEntry = {
     {
       title: "Inline suggestions",
       description:
-        "Still the fastest path to routine acceleration, especially for repetitive code, tests, and boilerplate you do not want to type by hand.",
+        "Still the fastest path to routine acceleration, especially for repetitive code, tests, and boilerplate you do not want to type by hand. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "Chat and agent mode",

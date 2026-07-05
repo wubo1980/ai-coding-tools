@@ -23,7 +23,7 @@ export const windsurfTool: ToolDetailEntry = {
     {
       title: "Unlimited tab completions",
       description:
-        "Unlike most competitors that cap completions per month, Windsurf delivers unlimited inline suggestions. For developers who write hundreds of lines a day, this removes the mental overhead of 'am I burning through my allocation?'.",
+        "Unlike most competitors that cap completions per month, Windsurf delivers unlimited inline suggestions. For developers who write hundreds of lines a day, this removes the mental overhead of 'am I burning through my allocation?'. The GitHub community (https://github.com/) has extensive discussions and examples covering this exact use case.",
     },
     {
       title: "Cascade agent mode",
