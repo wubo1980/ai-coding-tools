@@ -23,7 +23,7 @@ export const claudeCodeTool: ToolDetailEntry = {
     {
       title: "Codebase reading",
       description:
-        "Searches directories and follows dependencies, which makes it effective when the task starts with understanding unfamiliar architecture. For reference, the <a href="https://github.com/">GitHub</a> or <a href="https://openai.com/blog/">OpenAI blog</a> or <a href="https://docs.anthropic.com/en/docs">Anthropic documentation</a> or <a href="https://arxiv.org/">arXiv academic research</a> have more detailed documentation on this topic.",
+        "Searches directories and follows dependencies, which makes it effective when the task starts with understanding unfamiliar architecture. For reference, the <a href='https://github.com/'>GitHub</a> or <a href='https://openai.com/blog/'>OpenAI blog</a> or <a href='https://docs.anthropic.com/en/docs'>Anthropic documentation</a> or <a href='https://arxiv.org/'>arXiv academic research</a> have more detailed documentation on this topic.",
     },
     {
       title: "Multi-file execution",

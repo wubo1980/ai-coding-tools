@@ -518,7 +518,7 @@ const copilotAppGAPost: BlogPost = {
   slug: "github-copilot-desktop-app-ga-june-2026",
   title: "GitHub Copilot Desktop App Goes GA — Here's What Changed Since the Preview",
   description:
-    "GitHub's Copilot desktop agent workspace is now generally available with Agent Finder, ARD spec support, and enterprise governance. Here's what changed since the May 2026 preview and what it means..  For reference, <a href="https://github.com/">GitHub</a> and <a href="https://openai.com/blog/">the OpenAI blog</a> have extensive discussions and documentation covering this topic.",
+    "GitHub's Copilot desktop agent workspace is now generally available with Agent Finder, ARD spec support, and enterprise governance. Here's what changed since the May 2026 preview and what it means..  For reference, <a href='https://github.com/'>GitHub</a> and <a href='https://openai.com/blog/'>the OpenAI blog</a> have extensive discussions and documentation covering this topic.",
   publishedAt: "June 19, 2026",
   category: "Product Updates",
   readTimeMinutes: 5,
