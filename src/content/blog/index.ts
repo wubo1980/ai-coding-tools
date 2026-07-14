@@ -2356,6 +2356,94 @@ export const blogPosts: BlogPost[] = [
   agenticCodingBestPracticesPost,
   cursorCopilotWindsurfComparisonPost,
   claudeCodeTutorialPost,
+  {
+    slug: "ai-agent-claude-code-windsurf-practical-project",
+    title: "AI Agent编程实战：用Claude Code和Windsurf自动完成一个完整项目",
+    description: "掌握Claude Code和Windsurf Agent模式的实战技巧，从零搭建个人书签管理器。包含Prompt模板、双Agent对比和5个踩坑实录，帮你从AI补全升级到自动化项目交付。",
+    publishedAt: "2026-07-13",
+    category: "General",
+    readTimeMinutes: 5,
+    content: `2026年，AI编程进入Agent时代。Claude Code和Windsurf的Agent模式让AI不再只是补全代码片段，而是能自主完成完整的开发任务。我花了三周时间，分别用这两款工具的Agent模式搭建了一个个人书签管理器（API + 前端 + 数据库）。这篇实战记录不仅包含Prompt模板和踩坑点，还会告诉你：**什么时候该用Agent，什么时候千万别用**。
+
+## 理解Agent模式与传统补全的区别
+
+传统的AI补全（如Copilot、SuperMaven）只负责预测光标后的下一段代码，开发者需要自己分析需求、拆解步骤并组织文件。Agent模式的本质是**任务自动化**：你给一个高阶目标，AI自主决定执行路线。根据[ZeekLog的2026年AI编程工具横向评测](https://zeeklog.com/2026-aibian-cheng-gong-ju-agentshi-dai-zhong-ji-heng-ping-cursor-vs-claude-code-vs-windsurf-vs-copilot-4)，Agent模式在涉及多文件编辑和依赖安装的任务中，平均完成率比补全模式高出约30%。但代价是输出更不可控——Agent可能陷入循环、幻觉代码甚至破坏已有文件。
+
+举个简单的例子：写一个Python脚本，从CSV读取数据并生成统计图表。补全模式需要你逐行写import、read_csv、处理数据、调用matplotlib。Agent模式只需要说“写一个脚本，读取data.csv，画出柱状图并保存为chart.png”，剩下的交给AI。
+
+## Claude Code Agent：配置与第一个任务
+
+### 安装与配置
+
+Claude Code目前是Anthropic推出的命令行工具，支持集成到VS Code和JetBrains。安装后你需要先授权API Key，建议使用Anthropic Console创建的key。[CSDN上的一篇详细教程](https://blog.csdn.net/csdngouwei/article/details/161784036)指出，Claude Code的Agent模式默认在大模型环境下运行，因此需要确保网络稳定，且系统语言设置为英文能减少路径解析错误。
+
+**我的做法**：创建一个项目目录，用\`claude init\`初始化一个\`.claude\`配置文件，在此文件里设置角色（比如“你是资深Python后端开发者”）、语言偏好和最重要的**禁止给文件加注释**——否则Agent每次都会给代码加一堆废话注释，干扰阅读。
+
+### 第一个Agent任务：写一个Python脚本
+
+我让Claude Code Agent执行的任务：“在\`src/\`目录下创建一个\`csv_processor.py\`，读取同级目录下的\`data.csv\`，计算每列的平均值，输出到控制台。要求错误处理：如果文件不存在则创建示例数据。”
+
+Agent的反馈过程让我印象深刻：它先打印了工作计划（列出步骤），然后逐行创建文件，并自动生成一个示例CSV。整个过程耗时47秒，手动写至少需要10分钟。但这里出现了一个小插曲——Agent在if __name__ == "__main__"里忘了加调用入口函数，需要追加一条指令修正。这个问题在[另一篇ZeekLog对比文章](https://zeeklog.com/2026-aibian-cheng-gong-ju-agentshi-dai-zhong-ji-heng-ping-cursor-vs-claude-code-vs-windsurf-vs-copilot-6)中也有提到：Claude Code Agent倾向于输出“骨架代码”，关键细节有时遗漏，最好在Prompt中明确要求“包含可运行样本”。
+
+## Windsurf Agent：Flow模式实战
+
+Windsurf的Agent模式叫“Flow”，你可以理解为它有一个独立的Cascade面板来展示Agent的思维链。与Claude Code不同，Windsurf Agent默认允许**直接修改文件和执行终端命令**，这既是优点也是风险。
+
+### 配置Cascade + Agent
+
+安装Windsurf IDE后，开启Agent模式需要手动切换左下角模式为“Agent”。然后创建一个\`.windsurfrules\`文件可以指定全局规则。我的规则是：“所有命令运行前必须输出将要执行的命令，经用户确认后再执行。”这能避免Agent偷偷运行\`rm -rf\`之类的危险操作。
+
+### 文件操作自动化
+
+让Windsurf Agent完成同样那个CSV脚本任务。它的表现更激进——直接调用了\`pip install matplotlib\`安装依赖，并自动生成图表代码。第一次运行报错缺少seaborn，Agent立刻捕获错误并安装依赖。这种自我修复能力超出预期。但缺点是生成的代码量巨大（添加了大量异常处理和日志），对于简单的任务显得臃肿。
+
+## 双Agent搭建书签管理器（实战）
+
+我用同一个需求测试了两款工具：“开发一个书签管理器，后端用FastAPI，数据库用SQLite，前端用React，支持添加、删除、搜索书签，以及按标签筛选。”
+
+### 阶段1：项目脚手架
+
+- **Claude Code**：Agent先询问项目结构偏好，然后创建目录、初始化\`requirements.txt\`和\`package.json\`，耗时约3分钟。生成的React项目用的是Vite，但版本较旧（v5），需要手动升级。
+- **Windsurf**：直接运行\`npx create-react-app\`（没用Vite），过程中自动安装依赖，但创建了300多个文件，臃肿。用时仅1分30秒，但后续清理成本高。
+
+### 阶段2：API开发
+
+Claude Code Agent写出了完整的FastAPI路由，包括CRUD和标签筛选。但它在处理SQLite连接时用了全局变量，没有实现依赖注入。我追加了一个Prompt“用FastAPI的Depends重构数据库连接”，它自动修改了所有路由。Windsurf Agent在同样任务中直接使用了\`SQLAlchemy\`，过度设计，但可维护性更好。
+
+### 阶段3：前端集成
+
+这个阶段是Agent的“翻车重灾区”。Claude Code Agent在生成\`fetch\`调用时写死了硬编码端点为\`localhost:8000\`，且没有处理跨域。Windsurf Agent生成的前端代码直接调用了无法解析的绝对路径。两个Agent都需要人工干预。
+
+### 阶段4：测试与调试
+
+Claude Code Agent能自动生成pytest测试用例，覆盖率约70%。Windsurf Agent在同一任务中生成了冗长的Jest测试，但因为组件依赖未mock，测试失败。我花了一小时人工修复测试。
+
+## 5个实际失败案例及修复方案
+
+1. **无限循环**：Claude Code Agent在解决一个CSS兼容性问题时反复尝试修改同一个文件，每次都不生效，导致循环300多次。**修复**：在Prompt中加入“如果三次尝试无进展，输出错误并退出”。
+2. **幻觉代码**：Windsurf Agent在实现搜索功能时使用了虚构的第三方库\`search-engine-client\`。**修复**：开启\`--strict-mode\`限制只能使用\`requirements.txt\`中已列出的库。
+3. **上下文泄漏**：Agent错误地修改了无关文件，比如修改\`.gitignore\`。**修复**：在\`.claude\`或\`.windsurfrules\`中声明“不允许修改除\`src/\`目录外的任何文件”。
+4. **生成重复代码**：Agent给每个文件都加了冗长的docstring，导致代码行数暴增。**修复**：在系统Prompt中明确“禁止添加注释，除非必要”。
+5. **删除文件**：Windsurf Agent不小心删除了我的虚拟环境目录。**修复**：我已经将\`.windsurfrules\`中加入“禁止执行\`rm -rf\`”。
+
+## 最佳实践与选择建议
+
+综合来看，个人观点：
+
+- **Claude Code Agent**更适合需要精细控制的开发者——输出代码质量较高，但需要迭代指令来修正遗漏。
+- **Windsurf Agent**适合快速原型和自动化部署——它更主动，但风险也更大，必须配置严格的防护规则。
+
+如果你只是写一段代码片段，**别用Agent**，传统补全更快更准确。Agent的价值在于一次完成多个关联文件的操作，比如搭建项目骨架、实现完整CRUD。记住，每次让Agent工作时都要先在脑海里过一遍潜在风险：它会改哪些文件？能访问什么命令？然后设置边界。
+
+你试过Agent翻车吗？欢迎在评论区分享你的经历，点赞最高的三个故事我会送一份《Agent Prompt模板合集》。如果你对更多AI编程工具对比感兴趣，可以看我们的[2026年AI编程工具深度横评](/ai-coding-tools-deep-comparison-2026)。想要个性化配置建议？[AI编程工具订阅指南](/ai-coding-tools-subscription-guide-2026)里有按场景推荐的方案。`,
+    seo: {
+      title: "AI Agent编程实战：用Claude Code和Windsurf自动完成一个完整项目",
+      description: "掌握Claude Code和Windsurf Agent模式的实战技巧，从零搭建个人书签管理器。包含Prompt模板、双Agent对比和5个踩坑实录，帮你从AI补全升级到自动化项目交付。",
+      canonicalPath: "/blog/ai-agent-claude-code-windsurf-practical-project",
+    },
+  },
+
+
 ];
 
 export function getBlogPostsByNewest(): BlogPost[] {
