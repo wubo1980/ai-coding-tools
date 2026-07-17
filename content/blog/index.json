@@ -1,0 +1,249 @@
+[
+  {
+    "slug": "ai-coding-dark-side-burnout-2026",
+    "title": "The Dark Side of AI Coding — Why Engineers Are Burning Out and What to Do",
+    "description": "AI coding tools promised to free up developer time. Instead, 45% of engineers are working more hours, 49% feel emotionally drained weekly, and a new form of cognitive exhaustion called 'AI brain fry' is spreading. Here's why — and how to fix it.",
+    "publishedAt": "July 6, 2026",
+    "category": "Industry Analysis",
+    "readTimeMinutes": 8,
+    "seo": {
+      "title": "The Dark Side of AI Coding: Burnout, Addiction & Fixes",
+      "description": "AI coding tools are causing developer burnout at scale. 45% working more hours, 49% emotionally drained. Why AI coding is addictive, what 'brain fry' is, and the Short Leash Method fix.",
+      "canonicalPath": "/blog/ai-coding-dark-side-burnout-2026"
+    }
+  },
+  {
+    "slug": "cursor-compose3-origin-june-2026",
+    "title": "Cursor Launches Its Own AI Model Compose 3 and Origin Git Platform — What It Means",
+    "description": "Cursor announced Compose 3, its first self-trained 1.5T-parameter AI model trained on SpaceX's supercomputer, plus Origin, a Git forge built for AI agents, and a mobile app. Here's what changed.",
+    "publishedAt": "June 24, 2026",
+    "category": "Industry Analysis",
+    "readTimeMinutes": 6,
+    "seo": {
+      "title": "Cursor Launches Compose 3 Model and Origin Git Platform",
+      "description": "Cursor announced Compose 3, its first self-trained 1.5T model on SpaceX infrastructure, plus Origin Git forge for AI agents. What this means for developers.",
+      "canonicalPath": "/blog/cursor-compose3-origin-june-2026"
+    }
+  },
+  {
+    "slug": "openai-codex-record-replay-june-2026",
+    "title": "OpenAI Codex Record & Replay — Show a Workflow Once, Replay It Forever",
+    "description": "OpenAI Codex launched Record & Replay on June 17, 2026. Demonstrate a workflow once on your Mac, and Codex turns it into a reusable automation skill. Here's how it works and what it means.",
+    "publishedAt": "June 24, 2026",
+    "category": "Product Updates",
+    "readTimeMinutes": 5,
+    "seo": {
+      "title": "OpenAI Codex Record & Replay — Show Once, Replay Forever",
+      "description": "OpenAI Codex launched Record and Replay on June 17. Show a workflow once on your Mac, and Codex turns it into reusable automation. Find out how it works.",
+      "canonicalPath": "/blog/openai-codex-record-replay-june-2026"
+    }
+  },
+  {
+    "slug": "ai-coding-tools-security-symjack-worms-june-2026",
+    "title": "AI Coding Tools Are Under Attack — SymJack, Miasma Worms, and What Developers Must Know",
+    "description": "SymJack vulns affecting 6 AI coding agents, Miasma/IronWorm supply-chain worms, and new agentic CI/CD risks. A security roundup for developers using Cursor, Claude Code, Copilot, and Grok Build.",
+    "publishedAt": "June 24, 2026",
+    "category": "Security",
+    "readTimeMinutes": 7,
+    "seo": {
+      "title": "AI Code Security — SymJack, Worms & Developer Risks",
+      "description": "SymJack vulns affecting 6 AI coding agents, Miasma and IronWorm worms, and agentic CI/CD risks. A security roundup for Cursor, Claude Code, and Copilot users.",
+      "canonicalPath": "/blog/ai-coding-tools-security-symjack-worms-june-2026"
+    }
+  },
+  {
+    "slug": "github-copilot-desktop-app-ga-june-2026",
+    "title": "GitHub Copilot Desktop App Goes GA — Here's What Changed Since the Preview",
+    "description": "GitHub's Copilot desktop agent workspace is now generally available with Agent Finder, ARD spec support, and enterprise governance. Here's what changed since the May 2026 preview and what it means..  For reference, <a href='https://github.com/'>GitHub</a> and <a href='https://openai.com/blog/'>the OpenAI blog</a> have extensive discussions and documentation covering this topic.",
+    "publishedAt": "June 19, 2026",
+    "category": "Product Updates",
+    "readTimeMinutes": 5,
+    "seo": {
+      "title": "GitHub Copilot Desktop App Goes GA — June 2026 Update | AI Coding Tools",
+      "description": "GitHub's Copilot desktop agent workspace is now GA with Agent Finder and ARD spec. What changed since the May 2026 preview and what it means for developers and engineering orgs.",
+      "canonicalPath": "/blog/github-copilot-desktop-app-ga-june-2026"
+    }
+  },
+  {
+    "slug": "ai-coding-tools-pricing-comparison-2026",
+    "title": "AI Coding Tools Pricing 2026: Complete Comparison Guide — Cursor vs Copilot vs Windsurf vs Codex",
+    "description": "A comprehensive pricing comparison of 8 AI coding tools in 2026: Cursor, GitHub Copilot, Windsurf, OpenAI Codex, Claude Code, Gemini Code Assist, and more. Free tiers, hidden costs, and best value picks.",
+    "publishedAt": "June 27, 2026",
+    "category": "Guides",
+    "readTimeMinutes": 8,
+    "seo": {
+      "title": "AI Coding Tools Pricing 2026: Complete Comparison Guide",
+      "description": "A complete pricing comparison of 8 AI coding tools in 2026. Free tiers, hidden costs, usage caps, and best value picks for every budget. Updated June 2026.",
+      "canonicalPath": "/blog/ai-coding-tools-pricing-comparison-2026"
+    }
+  },
+  {
+    "slug": "best-open-source-ai-coding-tools-2026-aider-cline-continue",
+    "title": "Best Open Source AI Coding Tools 2026: Aider, Cline & Continue.dev Compared",
+    "description": "A practical comparison of the top open source AI coding tools in 2026: Aider, Cline, and Continue.dev. Installation guides, API cost analysis, and when to choose open source over commercial tools.",
+    "publishedAt": "June 27, 2026",
+    "category": "Guides",
+    "readTimeMinutes": 8,
+    "seo": {
+      "title": "Best Open Source AI Coding Tools 2026: Aider, Cline & Continue.dev Compared",
+      "description": "A practical comparison of open source AI coding tools in 2026: Aider, Cline, and Continue.dev. API cost analysis, feature comparison, and when to go open source vs commercial.",
+      "canonicalPath": "/blog/best-open-source-ai-coding-tools-2026-aider-cline-continue"
+    }
+  },
+  {
+    "slug": "cursor-35-copilot-desktop-agent-may-2026",
+    "title": "May 2026 Was a Landmark Month for AI Coding Tools — Here's What Changed",
+    "description": "Cursor shipped 3 releases in 3 weeks. GitHub Copilot launched a desktop agent. Anthropic opened a plugin directory. A recap of the fastest-moving month in AI coding tools.",
+    "publishedAt": "May 30, 2026",
+    "category": "Industry Analysis",
+    "readTimeMinutes": 6,
+    "seo": {
+      "title": "May 2026: Cursor 3.5/3.6, Copilot Desktop Agent, Claude Code Plugins | AI Coding Tools",
+      "description": "Cursor shipped 3 releases in 3 weeks. GitHub Copilot launched a desktop agent. Anthropic opened a plugin directory. A complete May 2026 recap.",
+      "canonicalPath": "/blog/cursor-35-copilot-desktop-agent-may-2026"
+    }
+  },
+  {
+    "slug": "microsoft-claude-code-licenses-canceled",
+    "title": "Microsoft Just Canceled Claude Code Licenses — Here's What It Means",
+    "description": "Microsoft started canceling Claude Code licenses in May 2026. Here's what actually happened, which developers are affected, and how to diversify your AI coding toolkit.",
+    "publishedAt": "May 28, 2026",
+    "category": "Industry News",
+    "readTimeMinutes": 4,
+    "seo": {
+      "title": "Microsoft Canceled Claude Code Licenses — May 2026 Update | AI Coding Tools",
+      "description": "Microsoft started canceling Claude Code licenses in May 2026. Here's what actually happened, which developers are affected, and how to diversify your AI coding toolkit.",
+      "canonicalPath": "/blog/microsoft-claude-code-licenses-canceled"
+    }
+  },
+  {
+    "slug": "windsurf-2026-review-cascade-agent-pricing",
+    "title": "Windsurf 2026 Review: Cascade Agent Mode, Pricing, and How It Stacks Against Cursor and Copilot",
+    "description": "A deep dive into Windsurf Editor in 2026. Cascade agent mode capabilities, unlimited tab completions, pricing breakdown, and a head-to-head comparison with Cursor and Copilot.",
+    "publishedAt": "June 29, 2026",
+    "category": "Tool Reviews",
+    "readTimeMinutes": 8,
+    "seo": {
+      "title": "Windsurf 2026 Review: Cascade Agent, Pricing & Comparison | AI Coding Tools",
+      "description": "A deep dive into Windsurf Editor in 2026. Cascade agent mode review, unlimited completion pricing breakdown, and head-to-head against Cursor and Copilot. Updated June 2026.",
+      "canonicalPath": "/blog/windsurf-2026-review-cascade-agent-pricing"
+    }
+  },
+  {
+    "slug": "how-to-prompt-ai-coding-agents-2026",
+    "title": "How to Prompt AI Coding Agents in 2026: A Practical Guide with Templates",
+    "description": "A practical guide to prompting AI coding agents in 2026. How to prompt Cursor, Claude Code, Copilot, and Windsurf effectively. Includes reusable prompt templates for different tasks.",
+    "publishedAt": "June 29, 2026",
+    "category": "Guides",
+    "readTimeMinutes": 9,
+    "seo": {
+      "title": "How to Prompt AI Coding Agents in 2026: Guide with Templates | AI Coding Tools",
+      "description": "A practical guide to prompting AI coding agents in 2026. How to prompt Cursor, Claude Code, Copilot, and Windsurf effectively. Includes reusable prompt templates.",
+      "canonicalPath": "/blog/how-to-prompt-ai-coding-agents-2026"
+    }
+  },
+  {
+    "slug": "how-to-build-ai-coding-workflow-2026",
+    "title": "How to Build a Complete AI Coding Workflow in 2026 — Combining Cursor, Claude Code & Copilot",
+    "description": "Stop using one AI coding tool for everything. Here's a practical workflow combining Cursor for editing, Claude Code for deep reasoning, and Copilot for daily autocomplete — plus when to use Windsurf and Codex.",
+    "publishedAt": "July 3, 2026",
+    "category": "Guides",
+    "readTimeMinutes": 8,
+    "seo": {
+      "title": "How to Build a Complete AI Coding Workflow in 2026 | AI Coding Tools",
+      "description": "Stop using one AI coding tool. Practical workflow combining Cursor for editing, Claude Code for deep reasoning, and Copilot for autocomplete in 2026.",
+      "canonicalPath": "/blog/how-to-build-ai-coding-workflow-2026"
+    }
+  },
+  {
+    "slug": "agentic-coding-best-practices-2026",
+    "title": "Agentic Coding Best Practices 2026 — From Vibe Coding to Real Engineering",
+    "description": "A practical guide to agentic coding in 2026: when to let agents run autonomously, when to gate approvals, how to review AI-generated code, and how to build team standards for safe AI-assisted development.",
+    "publishedAt": "July 3, 2026",
+    "category": "Guides",
+    "readTimeMinutes": 7,
+    "seo": {
+      "title": "Agentic Coding Best Practices 2026 — Safe AI-Assisted Development | AI Coding Tools",
+      "description": "A practical guide to agentic coding in 2026: autonomy levels, safety guardrails, approval gates, and team standards for safe AI-assisted development.",
+      "canonicalPath": "/blog/agentic-coding-best-practices-2026"
+    }
+  },
+  {
+    "slug": "cursor-vs-copilot-vs-windsurf-comparison-2026",
+    "title": "Cursor vs Copilot vs Windsurf in 2026 — A Developer's Complete Guide",
+    "description": "The definitive 2026 comparison of the three leading AI coding tools — Cursor, GitHub Copilot, and Windsurf. Performance benchmarks, pricing, use case analysis, and which tool wins for different developer profiles.",
+    "publishedAt": "July 3, 2026",
+    "category": "Guides",
+    "readTimeMinutes": 10,
+    "seo": {
+      "title": "Cursor vs Copilot vs Windsurf 2026: Complete Developer's Guide | AI Coding Tools",
+      "description": "The definitive 2026 comparison of Cursor, GitHub Copilot, and Windsurf. Performance benchmarks, pricing analysis, and which tool wins for different developer profiles.",
+      "canonicalPath": "/blog/cursor-vs-copilot-vs-windsurf-comparison-2026"
+    }
+  },
+  {
+    "slug": "claude-code-tutorial-2026-getting-started",
+    "title": "How to Get Started with Claude Code in 2026 — The Terminal Agent That Replaced My IDE",
+    "description": "A complete Claude Code tutorial for 2026: installation, configuration, key commands, plugin setup, and practical workflow examples. Covers both CLI and IDE integration patterns.",
+    "publishedAt": "July 3, 2026",
+    "category": "Guides",
+    "readTimeMinutes": 9,
+    "seo": {
+      "title": "Claude Code Tutorial 2026: Getting Started Guide | AI Coding Tools",
+      "description": "A complete Claude Code tutorial for 2026: installation, configuration, key commands, plugin setup, and practical workflow examples for getting productive quickly.",
+      "canonicalPath": "/blog/claude-code-tutorial-2026-getting-started"
+    }
+  },
+  {
+    "slug": "ai-agent-claude-code-windsurf-practical-project",
+    "title": "AI Agent编程实战：用Claude Code和Windsurf自动完成一个完整项目",
+    "description": "掌握Claude Code和Windsurf Agent模式的实战技巧，从零搭建个人书签管理器。包含Prompt模板、双Agent对比和5个踩坑实录，帮你从AI补全升级到自动化项目交付。",
+    "publishedAt": "2026-07-13",
+    "category": "General",
+    "readTimeMinutes": 5,
+    "seo": {
+      "title": "AI Agent编程实战：用Claude Code和Windsurf自动完成一个完整项目",
+      "description": "掌握Claude Code和Windsurf Agent模式的实战技巧，从零搭建个人书签管理器。包含Prompt模板、双Agent对比和5个踩坑实录，帮你从AI补全升级到自动化项目交付。",
+      "canonicalPath": "/blog/ai-agent-claude-code-windsurf-practical-project"
+    }
+  },
+  {
+    "slug": "ai-coding-tools-comparison-2026-july",
+    "title": "2026年7月AI编程工具深度横评：7款主流工具实测对比（含Claude Fable 5回归解读）",
+    "description": "2026年7月，7款主流AI编程工具实测横评。涵盖Claude Fable 5回归后格局变化、SWE-bench Pro 80.3%含金量、Cursor vs Copilot对决，以及按场景的最佳选择推荐。帮你从订阅疲劳中解脱，找到性价比最高的工具。",
+    "publishedAt": "2026-07-13",
+    "category": "General",
+    "readTimeMinutes": 4,
+    "seo": {
+      "title": "2026年7月AI编程工具深度横评：7款主流工具实测对比（含Claude Fable 5回归解读）",
+      "description": "2026年7月，7款主流AI编程工具实测横评。涵盖Claude Fable 5回归后格局变化、SWE-bench Pro 80.3%含金量、Cursor vs Copilot对决，以及按场景的最佳选择推荐。帮你从订阅疲劳中解脱，找到性价比最高的工具。",
+      "canonicalPath": "/blog/ai-coding-tools-comparison-2026-july"
+    }
+  },
+  {
+    "slug": "ai-coding-tool-subscription-guide-2026",
+    "title": "AI编程工具订阅指南 2026：从$0到$200/月，哪个方案最适合你？",
+    "description": "2026年主流AI编程工具定价全解析：Cursor、GitHub Copilot、Claude Code、Windsurf等隐藏成本与预算组合建议，帮你摆脱订阅疲劳。",
+    "publishedAt": "2026-07-14",
+    "category": "General",
+    "readTimeMinutes": 5,
+    "seo": {
+      "title": "AI编程工具订阅指南 2026：从$0到$200/月，哪个方案最适合你？",
+      "description": "2026年主流AI编程工具定价全解析：Cursor、GitHub Copilot、Claude Code、Windsurf等隐藏成本与预算组合建议，帮你摆脱订阅疲劳。",
+      "canonicalPath": "/blog/ai-coding-tool-subscription-guide-2026"
+    }
+  },
+  {
+    "slug": "2026-nian-7-kuan-ai-bian-ma-gong-ju",
+    "title": "2026 年开发者必备的 7 款 AI 编码工具（含评测数据）",
+    "description": "基于 Pragmatic Engineer 调查数据和真实社区反馈，对比 Cursor、GitHub Copilot、Claude Code 等 7 款 AI 编码工具的功能、定价与适用场景。",
+    "publishedAt": "2026-07-16",
+    "category": "General",
+    "readTimeMinutes": 5,
+    "seo": {
+      "title": "2026 年开发者必备的 7 款 AI 编码工具（含评测数据）",
+      "description": "基于 Pragmatic Engineer 调查数据和真实社区反馈，对比 Cursor、GitHub Copilot、Claude Code 等 7 款 AI 编码工具的功能、定价与适用场景。",
+      "canonicalPath": "/blog/2026-nian-7-kuan-ai-bian-ma-gong-ju"
+    }
+  }
+]
